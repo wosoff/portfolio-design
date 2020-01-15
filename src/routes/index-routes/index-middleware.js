@@ -1,7 +1,10 @@
-function respondIndex(req, res) {
-  res.end('Start portfolio design')
-}
+const splitQuery = require('../../core/splitQuery');
 
-module.exports = [
-  respondIndex
-]
+exports.respondIndexPost = function respondIndexPost(req, res) {
+  req.on('data', (data) => {
+    const [langKey, langValue] = splitQuery(data);
+
+    console.log(langKey, langValue);
+    res.redirect('/home');
+  });
+};
