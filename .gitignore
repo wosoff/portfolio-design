@@ -1,5 +1,7 @@
+/.vscode
 /node_modules
 /_temp
-/public/assets
+/test/test.js
+package-lock.json
 w_port_index_react_rsa
 w_port_index_react_rsa.pub

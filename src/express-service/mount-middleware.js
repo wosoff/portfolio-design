@@ -11,7 +11,7 @@ const { format } = require('./var/morgan-options');
  */
 function mountMiddleware(app) {
   app.use(express.static('dist'));
-  app.use('/public', express.static('public'));
+  app.use('/public/assets', express.static('public/assets'));
 
   // app.use(session({ secret: "cats", resave: true, saveUninitialized: true}));
   // app.use(bodyParser.urlencoded({ extended: false }));

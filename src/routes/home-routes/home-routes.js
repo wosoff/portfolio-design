@@ -1,9 +1,9 @@
-const { respondIndexPost } = require('./index-middleware');
+const { respondIndexPost } = require('./home-middleware');
 
 module.exports = [
   {
     method: 'get',
-    path: '/',
+    path: '/home',
     middleware: [
       respondIndexPost,
     ],

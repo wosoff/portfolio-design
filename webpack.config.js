@@ -5,11 +5,12 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
   mode: 'development',
   entry: {
-    app: resolve(__dirname, 'public', 'js', 'app.js'),
+    indexComponent: resolve(__dirname, 'src', 'views', 'index-component', 'index-component.js'),
+    homeComponent: resolve(__dirname, 'src', 'views', 'home-component', 'home-component.js'),
   },
   output: {
     filename: '[name].bundle.js',
-    path: resolve(__dirname, 'dist')
+    path: resolve(__dirname, 'public','assets' , 'dist')
   },
   module: {
     rules: [
@@ -34,9 +35,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CopyPlugin([
-      { from: 'public/index.dev.html', to: 'index.html' },
-    ]),
+    new CopyPlugin([])
   ],
   optimization: {
     minimizer: [
