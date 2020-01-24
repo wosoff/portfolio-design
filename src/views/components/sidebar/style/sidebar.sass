@@ -1,0 +1,41 @@
+.sidebar
+  width: 0
+  height: 100vh
+  
+
+  position: fixed
+  z-index: 1
+  top: 0
+  left: 0
+
+  overflow-x: hidden
+  transition: width 1s
+
+  background-color: cyan
+
+.sidebar .tab 
+  background-color: yellow
+  width: 100vw
+  height: 100vh
+
+  display: flex
+  flex-flow: row wrap
+
+
+.sidebar #close-sidebar
+  width: 15vw
+
+  position: absolute
+  top: 0
+  right: 0
+
+  z-index: 2
+  
+.sidebar-show
+  width: 100vw
+
+@media screen and (min-width: 1200px) 
+  .sidebar-show
+    width: 50vw
+
+

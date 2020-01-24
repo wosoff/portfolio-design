@@ -6,8 +6,8 @@ module.exports = (() => {
 
   return {
     TEMPLATE: {
-      INDEX: resolve(VIEWS, 'index-component', TEMPLATE, 'index.html'),
-      HOME: resolve(VIEWS, 'home-component', TEMPLATE, 'home.html'),
+      INDEX: resolve(VIEWS, 'index-view', TEMPLATE, 'index.html'),
+      HOME: resolve(VIEWS, 'home-view', TEMPLATE, 'home.html'),
     },
   };
 })();

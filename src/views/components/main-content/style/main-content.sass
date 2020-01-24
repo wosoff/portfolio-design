@@ -1,0 +1,18 @@
+.main-container
+  width: 100vw
+  height: 100vh
+  overflow: hidden
+  transition: margin-left 1s, width 1s
+
+  background: gray
+
+
+.main-container-collapsed
+  margin-left: 100vw
+  width: 0
+  
+
+@media screen and (min-width: 1200px) 
+  .main-container-collapsed
+    margin-left: 50vw
+    width: 50vw
