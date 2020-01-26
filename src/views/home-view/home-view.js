@@ -11,25 +11,16 @@ class HomeComponent extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      classNameList: {
-        sidebarShow: '',
-        mainContentCollapsed: ''
-      }
+      onSidebar: false,
+      onCollapsedMain: false
     }
     this.toggleSidebarClassName = this.toggleSidebarClassName.bind(this)
   }
 
   toggleSidebarClassName() {
-    const {classNameList} = this.state
-    const {sidebarShow, mainContentCollapsed} = classNameList
-
     this.setState({
-      classNameList: {
-        sidebarShow: sidebarShow === ''
-          ? 'sidebar-show' : '',
-        mainContentCollapsed: mainContentCollapsed === ''
-          ? 'main-container-collapsed' : ''
-      }
+      onSidebar: !this.state.onSidebar,
+      onCollapsedMain: !this.state.onCollapsedMain
     })
   }
 
@@ -37,12 +28,12 @@ class HomeComponent extends React.Component {
     return (
       <>
         <MainContent 
-          classNameList={this.state.classNameList}
-          toggleSidebarClassName={this.toggleSidebarClassName}
+          state={this.state}
+          onToggleSidebarClassName={this.toggleSidebarClassName}
         />
         <Sidebar 
-          classNameList={this.state.classNameList}
-          toggleSidebarClassName={this.toggleSidebarClassName}
+          state={this.state}
+          onToggleSidebarClassName={this.toggleSidebarClassName}
         />
       </>
     )
