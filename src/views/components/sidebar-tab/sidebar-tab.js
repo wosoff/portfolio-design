@@ -15,7 +15,6 @@ export default function SidebarTab() {
       />
       <SidebarContent 
         indexToTabBtn={indexToTabBtn}
-        tabContentTitles={tabContentTitles}
       />
     </div>
   )
