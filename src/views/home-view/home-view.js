@@ -16,7 +16,7 @@ class HomeComponent extends React.Component {
       onSidebar: false,
       onCollapsedMain: false
     }
-    this.contactLogoTimerID = null
+    this.contactLogoTimerID = 0
     this.toggleSidebarClassName = this.toggleSidebarClassName.bind(this)
   }
 
@@ -35,6 +35,11 @@ class HomeComponent extends React.Component {
       })
     }, 100)
   }
+
+  
+  componentWillUnmount() {
+    clearTimeout(this.contactLogoTimerID)
+   };
 
   render() {
     return (
