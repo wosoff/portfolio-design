@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import ContactLogo from '../components/contact-logo/contact-logo'
 import Sidebar from '../components/sidebar/sidebar'
 import MainContent from '../components/main-content/main-content'
 import './style/home-main.sass'
@@ -11,9 +12,11 @@ class HomeComponent extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      onLogoContact: false,
       onSidebar: false,
       onCollapsedMain: false
     }
+    this.contactLogoTimerID = null
     this.toggleSidebarClassName = this.toggleSidebarClassName.bind(this)
   }
 
@@ -24,9 +27,19 @@ class HomeComponent extends React.Component {
     })
   }
 
+  componentDidMount() {
+    this.contactLogoTimerID = setTimeout(() => {
+      this.setState({
+        ...this.state,
+        onLogoContact: !this.state.onLogoContact
+      })
+    }, 100)
+  }
+
   render() {
     return (
       <>
+        <ContactLogo state={this.state}/>
         <MainContent 
           state={this.state}
           onToggleSidebarClassName={this.toggleSidebarClassName}
