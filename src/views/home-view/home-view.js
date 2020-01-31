@@ -12,7 +12,6 @@ class HomeComponent extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      onLogoContact: false,
       onSidebar: false,
       onCollapsedMain: false
     }
@@ -27,24 +26,11 @@ class HomeComponent extends React.Component {
     })
   }
 
-  componentDidMount() {
-    this.contactLogoTimerID = setTimeout(() => {
-      this.setState({
-        ...this.state,
-        onLogoContact: !this.state.onLogoContact
-      })
-    }, 100)
-  }
-
-  
-  componentWillUnmount() {
-    clearTimeout(this.contactLogoTimerID)
-   };
 
   render() {
     return (
       <>
-        <ContactLogo state={this.state}/>
+        <ContactLogo />
         <MainContent 
           state={this.state}
           onToggleSidebarClassName={this.toggleSidebarClassName}
