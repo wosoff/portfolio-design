@@ -26,19 +26,24 @@ class HomeComponent extends React.Component {
     })
   }
 
-
   render() {
     return (
       <>
-        <ContactLogo />
-        <MainContent 
-          state={this.state}
-          onToggleSidebarClassName={this.toggleSidebarClassName}
-        />
-        <Sidebar 
-          state={this.state}
-          onToggleSidebarClassName={this.toggleSidebarClassName}
-        />
+        <div className="contact-logo-container">
+          <ContactLogo />
+        </div>
+        <div className="sidebar-container">
+          <Sidebar 
+            state={this.state}
+            onToggleSidebarClassName={this.toggleSidebarClassName}
+          />
+        </div>
+        <div className="main-content-container">
+          <MainContent 
+            state={this.state}
+            onToggleSidebarClassName={this.toggleSidebarClassName}
+          />
+        </div>
       </>
     )
   }
