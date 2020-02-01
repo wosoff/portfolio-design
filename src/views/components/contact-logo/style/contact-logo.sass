@@ -1,10 +1,10 @@
 .contact-logo
-  // If you change value to height, 
-  // it should synchronize the value to top of sidebar of sidebar componenet too!
-  // If you do not that, Layour will be broken!
+  width: 100vw
   height: 5vh
 
   position: relative
+  
+  cursor: pointer
 
   margin-left: -100vw
   transition: margin-left 1s ease-in
@@ -15,8 +15,13 @@
     height: 100%
   
 .show-contact-logo
-   margin-left: 0
+  margin-left: 0
 
+@media screen and (min-width:  700px)
+  .contact-logo
+    img 
+      width: 15vw
+      
 @media screen and (min-width: 1200px) 
   .contact-logo
     img 
