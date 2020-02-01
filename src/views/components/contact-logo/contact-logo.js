@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import ClassNames from 'classnames'
-import ContactCopyWindow from '../test-contact-copy-window/contact-copy-window'
+import ContactCopyWindow from '../contact-copy-window/contact-copy-window'
 import './style/contact-logo.sass'
 
 export default class ContactLogo extends Component {
