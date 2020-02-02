@@ -1,4 +1,4 @@
-.contact-copy-window
+.contact-window
   display: none
 
   width: 50vw
@@ -8,19 +8,23 @@
   top: 40vh
   left: 25vw
   z-index: 1
+
   background-color: rgb(255, 255, 255)
 
-  button
+  #window-close-button
     position: absolute
     top: 0
     right: 0
 
-.show-contact-copy-window
+  .contact-content-container
+    width: 100%
+    height: 100%
+
+.show-contact-window
   display: block
 
-
 @media screen and (min-width: 1200px) 
-  .contact-copy-window
+  .contact-window
     width: 30vw
     height: 30vh
 

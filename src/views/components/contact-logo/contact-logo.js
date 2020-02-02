@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import ClassNames from 'classnames'
-import ContactCopyWindow from '../contact-copy-window/contact-copy-window'
+import ContactWindow from '../contact-window/contact-window'
 import './style/contact-logo.sass'
 
 export default class ContactLogo extends Component {
@@ -61,7 +61,7 @@ export default class ContactLogo extends Component {
           src="public/assets/images/contact-logo.gif"
           alt="Contact Logo"
         />
-        <ContactCopyWindow 
+        <ContactWindow 
           isOnContactCopyWindow={isOnContactCopyWindow}
           didClickCloseBtnToCopyWindow={didClickCloseBtnToCopyWindow}
           handleCloseCopyWindow={this.handleCloseCopyWindow}

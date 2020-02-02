@@ -1,4 +1,9 @@
-Takout app.js or main.js from public folder 
+TODO
 
-Only files should be in public folder are images, bundle files of javascript that Those bundle files
-must ugglyfied!
+Solve button with z-index!
+
+---
+
+Example For display is flex and item aligns
+
+See components/contact-window-content
