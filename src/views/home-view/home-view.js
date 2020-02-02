@@ -1,9 +1,10 @@
+import './style/home-main.sass'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import ContactLogo from '../components/contact-logo/contact-logo'
 import Sidebar from '../components/sidebar/sidebar'
 import MainContent from '../components/main-content/main-content'
-import './style/home-main.sass'
+
 
 class HomeComponent extends React.Component {
   /**
@@ -27,6 +28,8 @@ class HomeComponent extends React.Component {
   }
 
   render() {
+    const {onCollapsedMain, onSidebar} = this.state
+
     return (
       <>
         <div className="contact-logo-container">
@@ -34,13 +37,13 @@ class HomeComponent extends React.Component {
         </div>
         <div className="sidebar-container">
           <Sidebar 
-            state={this.state}
+            onSidebar={onSidebar}
             onToggleSidebarClassName={this.toggleSidebarClassName}
           />
         </div>
         <div className="main-content-container">
           <MainContent 
-            state={this.state}
+            onCollapsedMain={onCollapsedMain}
             onToggleSidebarClassName={this.toggleSidebarClassName}
           />
         </div>

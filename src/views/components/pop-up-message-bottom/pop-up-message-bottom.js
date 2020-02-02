@@ -1,6 +1,7 @@
 import './style/pop-up-message-bottom.sass'
 import React from 'react'
 import Classnames from 'classnames'
+import CommonCloseBtn from '../common-close-button/common-close-btn'
 
 /**
  * @param {{ msg: string, setMsg: Function}} props
@@ -22,12 +23,11 @@ export default function PopUpMessageBottom(props) {
   return (
     <div className={className}>
       <span>{msg}</span>
-      <button
-        id="close-pop-up-bottom"
-        onClick={closePopUpMsg}
-      >
-        X
-      </button>
+      <div className="close-pop-up-bottom">
+        <CommonCloseBtn 
+          onClick={closePopUpMsg}
+        />
+      </div>
     </div>
   )
 }

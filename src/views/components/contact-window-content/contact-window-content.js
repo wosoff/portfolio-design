@@ -2,7 +2,6 @@ import './style/contact-window-content.sass'
 import React, {useRef} from 'react'
 import PopUpMessageBottom from '../pop-up-message-bottom/pop-up-message-bottom'
 
-
 /**
  * @param {{ copySuccess: any; setCopySuccess: any; }} props
  */
@@ -49,4 +48,3 @@ export default function ContactWindowContent(props) {
   </div>
   )
 }
-

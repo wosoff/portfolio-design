@@ -2,6 +2,7 @@ import './style/contact-window.sass'
 import React, {useState} from 'react'
 import ClassNames from 'classnames'
 import ContactWindowContent from '../contact-window-content/contact-window-content'
+import CommonCloseBtn from '../common-close-button/common-close-btn'
 
 /**
  * @param {any} props
@@ -26,12 +27,9 @@ export default function ContactWindow(props) {
 
   return (
     <div className={className}>
-      <button
-        id="window-close-button"
-        onClick={closeCopyWindow}
-      >
-        Close
-      </button>
+      <div className="close-contact-window-wrapper">
+        <CommonCloseBtn onClick={closeCopyWindow} />
+      </div>
       <div className="contact-content-container">
         <ContactWindowContent 
           copySuccess={copySuccess}

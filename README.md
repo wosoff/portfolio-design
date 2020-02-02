@@ -1,6 +1,8 @@
 TODO
 
-Solve button with z-index!
+- Solve button with z-index!
+
+- Hide alert window with setInterval
 
 ---
 
