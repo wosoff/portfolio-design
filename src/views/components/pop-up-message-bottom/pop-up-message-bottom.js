@@ -26,6 +26,7 @@ export default function PopUpMessageBottom(props) {
       <div className="close-pop-up-bottom">
         <CommonCloseBtn 
           onClick={closePopUpMsg}
+          position={{top: '12px', right: '10px'}}
         />
       </div>
     </div>

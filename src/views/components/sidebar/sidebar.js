@@ -1,7 +1,7 @@
 import './style/sidebar.sass'
 import React from 'react'
 import ClassNames from 'classnames'
-import SidebarTab from '../sidebar-tab/sidebar-tab'
+import SidebarMembers from '../sidebar-members/sidebar-members'
 import CommonCloseBtn from '../common-close-button/common-close-btn'
 
 /**
@@ -20,10 +20,10 @@ export default function Sidebar(props) {
 
   return (
     <div className={className}>
-      <div className={"sidebar-close-btn-wrapper"}>
-        <CommonCloseBtn onClick={closeSidebar} />
+      <CommonCloseBtn onClick={closeSidebar} />
+      <div className="sidebar-members-layout">   
+        <SidebarMembers />
       </div>
-      <SidebarTab />
     </div>
   )
 }

@@ -1,9 +1,10 @@
-#close-sidebar
+.common-close-button
   width: 8vw
   height: 8vw
 
-  position: relative
-  margin: auto
+  position: absolute
+  top: 0
+  right: 0
 
   cursor: pointer
   z-index: 1
@@ -11,8 +12,8 @@
   &:hover
     opacity: 1
 
-  #close-sidebar-fragment-1,
-  #close-sidebar-fragment-2
+  #common-close-button-fragment-1,
+  #common-close-button-fragment-2
     width: 10%
     height: 100%
 
@@ -20,18 +21,18 @@
     left: 45%
 
     background-color: rgb(0, 0, 0)
-
-  #close-sidebar-fragment-1
+  
+  #common-close-button-fragment-1
     transform: rotate(45deg)
-  #close-sidebar-fragment-2
+  #common-close-button-fragment-2
     transform: rotate(-45deg)
 
 @media screen and (min-width: 800px) 
-  #close-sidebar
+  .common-close-button
     width: 3vw
     height: 3vw
 
 @media screen and (min-width: 1200px) 
-  #close-sidebar
+  .common-close-button
     width: 2vw
     height: 2vw

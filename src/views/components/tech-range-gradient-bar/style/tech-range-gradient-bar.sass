@@ -1,0 +1,44 @@
+.tech-range-gradient-bar  
+  width: 60vw
+  height: 5vw
+
+  display: flex
+  flex-flow: row 
+
+  .tech-title
+    width: 40vw
+    height: 5vw
+
+    text-align: center
+    line-height: 5vw
+    
+  .tech-bar
+    width: 20vw
+    height: 5vw
+    border-radius: 5px
+    border: 1px solid black
+
+@media screen and (min-width: 700px)
+  .tech-range-gradient-bar
+    width: 40vw
+    height: 2vw
+
+    .tech-title
+      width: 20
+      line-height: 2vw // Note that!
+
+    .tech-bar
+      width: 20vw
+      height: 2vw
+
+@media screen and (min-width: 1200px)
+  .tech-range-gradient-bar
+    width: 30vw
+    height: 2vw
+
+    .tech-title
+      line-height: 2vw // Note that!
+
+    .tech-bar
+      width: 20vw
+      height: 2vw

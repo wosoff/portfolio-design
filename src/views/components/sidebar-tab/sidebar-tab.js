@@ -1,21 +1,25 @@
-import React, { useState } from 'react'
-import SidebarTabBtn from '../sidebar-tab-btn/sidebar-tab-btn'
-import SidebarContent from '../sidebar-content/sidebar-content'
 import './style/sidebar-tab.sass'
+import React from 'react'
 
-export default function SidebarTab() {
-  const [indexToTabBtn, setIndex] = useState(0);
-  const tabContentTitles = ['Work', 'Tech', 'History']
+/**
+ * @param {{ setIndex: Function; tabContentTitles: string[]; }} props
+ */
+export default function SidebarTab(props) {
+  const {setIndex, tabContentTitles} = props
+
+  const tabButtons = tabContentTitles.map((title, indexToTitle) => (
+    <div
+      key={title.toLowerCase() + '-' + indexToTitle}
+      id={'tab-'+ title.toLowerCase()}
+      onClick={() => {setIndex(indexToTitle)}}
+    >
+      {title}
+    </div>
+  ))
 
   return (
     <div className="sidebar-tab">
-      <SidebarTabBtn 
-        setIndex={setIndex} 
-        tabContentTitles={tabContentTitles}
-      />
-      <SidebarContent 
-        indexToTabBtn={indexToTabBtn}
-      />
+      {tabButtons}
     </div>
   )
 }
