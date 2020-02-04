@@ -1,0 +1,28 @@
+.align-children-at-img-viewer
+  display: flex
+  flex-flow: row
+  justify-content: center
+
+.image-viewer
+  // For click event Handling!
+  z-index: 1
+
+// Note that To Display custom size of image,
+// Below frame class should be need!
+.image-viewer-frame
+  width: 100%
+  height: 100%
+
+.image-viewer-src
+  width: 100%
+  height: 100%
+
+@media screen and (min-width:  700px)
+  .image-viewer-src
+    width: 80%
+    height: 80%
+    
+@media screen and (min-width:  1200px)
+  .image-viewer-src
+    width: 60%
+    height: 60%

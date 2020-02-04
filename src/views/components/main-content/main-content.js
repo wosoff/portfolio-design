@@ -30,7 +30,7 @@ export default function MainContent(props) {
     transformMenuIcon()
   }
   
-  const className = ClassNames('main-container', {
+  const className = ClassNames('main-content', {
     'collapsed-main-content': onCollapsedMain === true
   })
 
@@ -46,7 +46,7 @@ export default function MainContent(props) {
         <div className="menu-icon-third-bar"></div>
       </div>
       <div className='content'>
-        Main Content
+        <p>Main Content</p>
       </div>
     </div>
   )

@@ -1,5 +1,5 @@
 import './style/sidebar.sass'
-import React from 'react'
+import React, { useState } from 'react'
 import ClassNames from 'classnames'
 import SidebarMembers from '../sidebar-members/sidebar-members'
 import CommonCloseBtn from '../common-close-button/common-close-btn'
@@ -10,7 +10,14 @@ import CommonCloseBtn from '../common-close-button/common-close-btn'
 export default function Sidebar(props) {
   const {onSidebar, onToggleSidebarClassName} = props
 
+  const [indexToTabBtn, setIndexToSidebarTab] = useState(0);
+
+  function initSidebarTab() {
+    setIndexToSidebarTab(0)
+  }
+
   function closeSidebar() {
+    initSidebarTab()
     onToggleSidebarClassName()
   }
 
@@ -20,9 +27,14 @@ export default function Sidebar(props) {
 
   return (
     <div className={className}>
-      <CommonCloseBtn onClick={closeSidebar} />
-      <div className="sidebar-members-layout">   
-        <SidebarMembers />
+      <CommonCloseBtn 
+        onClick={closeSidebar} 
+      />
+      <div className="sidebar-members-container">
+        <SidebarMembers 
+          indexToTabBtn={indexToTabBtn}
+          setIndexToSidebarTab={setIndexToSidebarTab}
+        />
       </div>
     </div>
   )

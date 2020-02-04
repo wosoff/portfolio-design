@@ -2,7 +2,7 @@ import React from 'react'
 import './style/common-close-btn.sass'
 
 /**
- * @param {{ onClick: Function, position?: {top?: any, right?: any, bottom?: any, left?: any}}} props
+ * @param {{ onClick: Function, position?: {top?: string, right?: string, bottom?: string, left?: string}}} props
  */
 export default function CommonCloseBtn(props) {
   let topValue

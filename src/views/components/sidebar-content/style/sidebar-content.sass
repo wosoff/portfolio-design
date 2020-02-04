@@ -1,15 +1,13 @@
 .sidebar-content
-  width: 100%
-
   display: flex
   flex-flow: column
 
-.sidebar-content > div
-  display: none
+.sidebar-content 
+  > div
+    display: none
 
 // Why .show-sidebar-content is child, not .show-sidebar-content?
 // Because .sidebar-content div is declared first 
 .sidebar-content 
   .show-sidebar-content
-    width: 100%
     display: block

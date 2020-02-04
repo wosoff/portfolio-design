@@ -1,6 +1,5 @@
 .sidebar
   width: 0
-  height: 100vh
   
   position: absolute
   top: 0
@@ -11,14 +10,20 @@
 
   background-color: rgb(235, 236, 200)
 
-  .sidebar-members-container
-    width: 100%
-  
+// Warning!
+// The value of width must be synchronize with the value to width of main-content
+// See main-content.sass in main-content
 .show-sidebar
-  width: 100vw
+  width: 100%
 
+// Warning!
+// The value of width must be synchronize with the value to width of main-content
+// See main-content.sass in main-content
+// e.g.
+// If margin-left of main-content will be change 0% to 80% when sidebar is collapsed
+// sidebar's width must be 80% too!
 @media screen and (min-width: 1200px) 
   .show-sidebar
-    width: 80vw
+    width: 80%
 
 

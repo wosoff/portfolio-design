@@ -1,9 +1,10 @@
-.main-container
+.main-content
   // It should be need for open-button positioning!
   position: relative
+  min-height: 100vh
 
-  width: 100vw
-  height: 100vh
+  // Note that! NEVER USE MIN-WIDTH WHEN YOU COLLAPSED MAIN CONTENT!
+
   overflow: hidden
   transition: margin-left 1s, width 1s
 
@@ -41,12 +42,23 @@
     -webkit-transform: rotate(45deg) translate(-8px, -8px)
     transform: rotate(45deg) translate(-8px, -8px)
 
+// Warning!
+// The value of width must be synchronize with the value to width of main-content
+// See main-content.sass in main-content
+// e.g.
+// If margin-left of main-content will be change 0% to 80% when sidebar is collapsed
+// sidebar's width must be 80% too!
 .collapsed-main-content
-  margin-left: 100vw
+  margin-left: 100%
   width: 0
   
-
+// Warning!
+// The value of width must be synchronize with the value to width of main-content
+// See main-content.sass in main-content
+// e.g.
+// If margin-left of main-content will be change 0% to 80% when sidebar is collapsed
+// sidebar's width must be 80% too!
 @media screen and (min-width: 1200px) 
   .collapsed-main-content
-    margin-left: 80vw
-    width: 80vw
+    margin-left: 80%
+    width: 80%

@@ -1,21 +1,25 @@
 import './style/sidebar-members.sass'
-import React, { useState } from 'react'
+import React from 'react'
 import SidebarTab from '../sidebar-tab/sidebar-tab'
 import SidebarContent from '../sidebar-content/sidebar-content'
 
-export default function SidebarMembers() {
-  const [indexToTabBtn, setIndex] = useState(0);
+/**
+ * @param {{ indexToTabBtn: number; setIndexToSidebarTab: Function; }} props
+ */
+export default function SidebarMembers(props) {
+  const {indexToTabBtn, setIndexToSidebarTab} = props
+
   const tabContentTitles = ['Work', 'Tech', 'History']
 
   return (
     <div className="sidebar-members">
-      <div className="sidebar-tab-layout">
+      <div className="layout-sidebar-tab">
         <SidebarTab 
-          setIndex={setIndex} 
+          setIndexToSidebarTab={setIndexToSidebarTab} 
           tabContentTitles={tabContentTitles}
         />
       </div>
-      <div className="sidebar-content-layout">
+      <div className="layout-sidebar-content">
         <SidebarContent 
           indexToTabBtn={indexToTabBtn}
         />

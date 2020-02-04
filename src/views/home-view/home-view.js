@@ -32,16 +32,16 @@ class HomeComponent extends React.Component {
 
     return (
       <>
-        <div className="contact-logo-layout">
+        <div className="layout-contact-logo">
           <ContactLogo />
         </div>
-        <div className="sidebar-layout">
+        <div className="layout-sidebar">
           <Sidebar 
             onSidebar={onSidebar}
             onToggleSidebarClassName={this.toggleSidebarClassName}
           />
         </div>
-        <div className="main-content-layout">
+        <div className="layout-main-content">
           <MainContent 
             onCollapsedMain={onCollapsedMain}
             onToggleSidebarClassName={this.toggleSidebarClassName}

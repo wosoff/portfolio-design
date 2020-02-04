@@ -1,30 +1,25 @@
 $btn-ransitionTimea: 0.5s
 
-.sidebar-tab
-  width: 100%
-
+.sidebar-tab 
   display: flex
   flex-flow: column wrap
 
- 
+  > div
+    height: 33.3vh
+    border-bottom: 0.1rem solid  rgb(255, 255, 255)
+    border-right: 0.1rem solid  rgb(255, 255, 255)
+    box-sizing: border-box
 
-.sidebar-tab div
-  height: 10vh
+    background-color: rgb(26, 30, 61)
+    color: rgb(150, 146, 146)
+    text-align: center
+    line-height: 33.3vh
+    cursor: pointer
 
-  border-bottom: 0.1rem solid  rgb(255, 255, 255)
-  border-right: 0.1rem solid  rgb(255, 255, 255)
-  box-sizing: border-box
+    transition: all $btn-ransitionTimea
 
-  background-color: rgb(26, 30, 61)
-  color: rgb(255, 255, 255)
-  text-align: center
-  line-height: 10vh
-  cursor: pointer
+    z-index: 1
 
-  transition: all $btn-ransitionTimea
-
-  z-index: 1
-
-  &:hover
-    opacity: 0.5
+    &:hover
+      opacity: 0.5
     
