@@ -24,6 +24,7 @@ export default function CommonCloseBtn(props) {
       className='common-close-button'
       onClick={() => {
         onClick()
+        
       }}
       style={{
         top: topValue,

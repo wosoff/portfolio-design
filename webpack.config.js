@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     indexView: resolve(__dirname, 'src', 'views', 'index-view', 'index-view.js'),
     homeView: resolve(__dirname, 'src', 'views', 'home-view', 'home-view.js'),
+    testView: resolve(__dirname, 'test', 'test.js')
   },
   output: {
     filename: '[name].bundle.js',

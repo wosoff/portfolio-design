@@ -1,21 +1,46 @@
-.align-children-at-img-viewer
-  display: flex
-  flex-flow: row
-  justify-content: center
-
 .image-viewer
   // For click event Handling!
   z-index: 1
+  cursor: pointer
+
+  display: flex
+  flex-flow: row
+  justify-content: center
+  
 
 // Note that To Display custom size of image,
 // Below frame class should be need!
 .image-viewer-frame
+  position: relative
+
   width: 100%
   height: 100%
+
+  display: flex
+  flex-flow: row
+  justify-content: center
 
 .image-viewer-src
   width: 100%
   height: 100%
+
+.image-viewer-zoom-btn
+  display: none
+
+  position: absolute
+  z-index: 1
+  
+  width: 100%
+  height: 100%
+
+  font-size: 1.5rem
+  color: rgb(255, 255, 255)
+  background-color: rgba(0, 0, 0, 0.3)
+  
+  cursor: pointer
+
+.show-image-viewer-zoom-btn
+  display: block
 
 @media screen and (min-width:  700px)
   .image-viewer-src

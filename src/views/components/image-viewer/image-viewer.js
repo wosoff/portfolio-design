@@ -1,11 +1,12 @@
 import './style/image-viewer.sass'
-import React from 'react'
+import React, {useState} from 'react'
+import ClassNames from 'classnames'
 
 /**
- * @param {{ src: string; width?: number; height?: number; }} props
+ * @param {{ src: string; width?: number; height?: number; clickZoomButton: Function}} props
  */
 export default function ImageViewer(props) {
-  const {src, width, height} = props
+  const {src, width, height, clickZoomButton} = props
 
   const defaultStyleValue = ""
   const styleW = typeof width === 'number' 
@@ -16,16 +17,33 @@ export default function ImageViewer(props) {
     ? height.toString() + 'px'
     : defaultStyleValue
 
+
+  const [isOnZoomIn, setOnZoomIn] = useState(false)
+
+  const classNames = ClassNames('image-viewer-zoom-btn', {
+    'show-image-viewer-zoom-btn': isOnZoomIn === true
+  })
+
   return (
     <div 
-      className="image-viewer align-children-at-img-viewer"
-      style={{width: styleW, height: styleH}}
+      className="image-viewer"
+      style={{width: styleW, height: styleH}}  
     >
-      <div className="image-viewer-frame align-children-at-img-viewer">
+      <div className="image-viewer-frame">
         <img 
-          className="image-viewer-src"
+          className={"image-viewer-src"}
           src={src}
+          onMouseOver={() => {
+            setOnZoomIn(true)
+          }}
         />
+        <button 
+          className={classNames}
+          onMouseOut={() => {setOnZoomIn(false)}}
+          onClick={() => {clickZoomButton(true)}}
+        > 
+          Click!
+        </button>
       </div>
     </div>
   )
