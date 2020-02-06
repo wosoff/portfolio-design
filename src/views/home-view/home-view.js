@@ -16,6 +16,7 @@ class HomeComponent extends React.Component {
       onSidebar: false,
       onCollapsedMain: false
     }
+    this.lang = sessionStorage.getItem('LANG')
     this.contactLogoTimerID = 0
     this.toggleSidebarClassName = this.toggleSidebarClassName.bind(this)
   }

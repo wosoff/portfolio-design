@@ -1,6 +1,7 @@
 import './style/sidebar-tech-frontend.sass'
 import React from 'react'
 import TechRangeGradientBar from '../tech-range-gradient-bar/tech-range-gradient-bar'
+import selectLanguage from '../../helpers/selectLanguage'
 
 export default function SidebarTechFrontend() {
   const deg90 = 90
@@ -9,7 +10,11 @@ export default function SidebarTechFrontend() {
   
   return (
     <div className="tech-frontend">
-      <div>Web Programming Frontend</div>
+      <div>
+        {selectLanguage({
+          en: 'Web Programming Frontend', ko: '웹 프로그래밍 프론트엔드 (브라우저 관련 프로세싱)'
+        })}
+      </div>
       <div className="tech-frontend-html">
         <TechRangeGradientBar 
           title='HTML' deg={deg90} colors={colorToHighSkill}
@@ -22,17 +27,23 @@ export default function SidebarTechFrontend() {
       </div>
       <div className="tech-frontend-jquery">
         <TechRangeGradientBar
-          title="JQuery" deg={deg90} colors={colorToHighSkill}
+          title={selectLanguage({en: 'JQuery', ko: '제이쿼리'})}
+          deg={deg90} 
+          colors={colorToHighSkill}
         />
       </div>
       <div className="tech-frontend-animation">
         <TechRangeGradientBar
-          title="Web Animation" deg={deg90} colors={colorToMiddleSkill}
+          title={selectLanguage({en: 'Web Animation', ko: '웹 애니메이션'})} 
+          deg={deg90} 
+          colors={colorToMiddleSkill}
         />
       </div>
       <div className="tech-frontend-react">
         <TechRangeGradientBar
-          title="React" deg={deg90} colors={colorToHighSkill}
+          title={selectLanguage({en: 'React', ko: '리액트'})}
+          deg={deg90} 
+          colors={colorToHighSkill}
         />
       </div>
     </div>

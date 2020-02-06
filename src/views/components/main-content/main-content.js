@@ -1,6 +1,7 @@
+import './style/main-content.sass'
 import React, {useRef, useEffect} from 'react'
 import ClassNames from 'classnames'
-import './style/main-content.sass'
+import selectLanguage from '../../helpers/selectLanguage'
 
 /**
  * @param {{ onCollapsedMain: boolean; onToggleSidebarClassName: Function; }} props
@@ -46,7 +47,12 @@ export default function MainContent(props) {
         <div className="menu-icon-third-bar"></div>
       </div>
       <div className='content'>
-        <p>Main Content</p>
+        <p>
+          {selectLanguage({
+            en: 'Main Content',
+            ko: '메인 콘텐츠'
+          })}
+        </p>
       </div>
     </div>
   )

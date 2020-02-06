@@ -9,14 +9,11 @@ import SidebarContent from '../sidebar-content/sidebar-content'
 export default function SidebarMembers(props) {
   const {indexToTabBtn, setIndexToSidebarTab} = props
 
-  const tabContentTitles = ['Work', 'Tech', 'History']
-
   return (
     <div className="sidebar-members">
       <div className="layout-sidebar-tab">
         <SidebarTab 
           setIndexToSidebarTab={setIndexToSidebarTab} 
-          tabContentTitles={tabContentTitles}
         />
       </div>
       <div className="layout-sidebar-content">

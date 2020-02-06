@@ -1,6 +1,7 @@
 import './style/contact-window-content.sass'
 import React, {useRef} from 'react'
 import PopUpMessageBottom from '../pop-up-message-bottom/pop-up-message-bottom'
+import selectLanguage from '../../helpers/selectLanguage'
 
 /**
  * @param {{ copySuccess: any; setCopySuccess: any; }} props
@@ -10,9 +11,8 @@ export default function ContactWindowContent(props) {
   // redefine it as load useState from react hook
   // See https://reactjs.org/docs/hooks-intro.html
   const {copySuccess, setCopySuccess} = props
-  
   const textAreaRef = useRef(null)
-
+  
   // @ts-ignore
   function copyToClipboard(e) {
     if (textAreaRef === null) {
@@ -24,7 +24,13 @@ export default function ContactWindowContent(props) {
     
     document.execCommand('copy')
     e.target.focus()
-    setCopySuccess('Copied!')
+
+    setCopySuccess(
+      selectLanguage({
+        en: 'Copied!',
+        ko: '복사되었습니다!'
+      })
+    )
   }
 
   return (
@@ -39,7 +45,10 @@ export default function ContactWindowContent(props) {
       id="btn-copy-contact-window-content"
       onClick={copyToClipboard}
     >
-      Copy
+      {selectLanguage({
+        en: 'Copy',
+        ko: '복사하기'})
+      }
     </button>
     <PopUpMessageBottom 
       msg={copySuccess}

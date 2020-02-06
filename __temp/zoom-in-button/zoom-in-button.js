@@ -1,6 +1,6 @@
 import './style/zoom-in-button.sass'
 import React, {useState} from 'react'
-import ZoomController from '../zoom-controller/zoom-controller'
+import ZoomController from '../../src/views/components/zoom-controller/zoom-controller'
 
 /**
  * @param {{ src: string; isZoomBtnON: boolean; setZoomBtnDisplay: Function}} props
