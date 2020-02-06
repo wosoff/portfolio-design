@@ -25,17 +25,15 @@ export default function ImageViewer(props) {
   })
 
   return (
-    <div 
-      className="image-viewer"
-      style={{width: styleW, height: styleH}}  
-    >
-      <div className="image-viewer-frame">
+    <div className="image-viewer">
+      <div 
+        className="image-viewer-frame"
+        style={{width: styleW, height: styleH}}
+      >
         <img 
-          className={"image-viewer-src"}
+          className="image-viewer-src"
           src={src}
-          onMouseOver={() => {
-            setOnZoomIn(true)
-          }}
+          onMouseOver={() => {setOnZoomIn(true)}}
         />
         <button 
           className={classNames}

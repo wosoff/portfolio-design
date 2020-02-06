@@ -12,9 +12,7 @@ export default function SidebarContentWork() {
           description={selectLanguage({
             en: 'The Ape',
             ko: '자연스러운 영장류, 우리는'
-          })
-            
-          }
+          })}
         />
       </div>
       

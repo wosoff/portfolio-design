@@ -1,7 +1,8 @@
 /.vscode
 /node_modules
-/_temp
-/test/test.js
+/__temp
+/test
 package-lock.json
 w_port_index_react_rsa
 w_port_index_react_rsa.pub
+aws_key_pair_wosoff.pem

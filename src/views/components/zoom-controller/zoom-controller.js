@@ -4,36 +4,12 @@ import ClassNames from 'classnames'
 import CommonCloseButton from '../common-close-button/common-close-btn'
 
 /**
- * @param {{ src?: string|undefined; ComponentToZoomIN?: Function;}} props
- */
-function ZoomCanvas(props) {
-  const {src, ComponentToZoomIN} = props
-
-  if (typeof src === 'string') {
-    return (
-      <div 
-        className="zoom-canvas"
-      >
-        <img 
-          src={src}
-        />
-      </div>
-    )
-  }
-
-  return (
-    <div className="zoom-canvas">
-      // @ts-ignore
-      <ComponentToZoomIN />
-    </div>
-  )
-}
-
-/**
- * @param {{ isOnZoomButton: boolean; clickZoomButton: Function; src?: string; ComponentToZoomIN?: Function;}} props
+ * @param {{ isOnZoomButton: boolean; clickZoomButton: Function; src?: string; width: string; height: string}} props
  */
 export default function ZoomController(props) {
-  const {isOnZoomButton, clickZoomButton, src, ComponentToZoomIN} = props
+  const {isOnZoomButton, clickZoomButton, src, 
+    width, height
+  } = props
 
   const className = ClassNames('zoom-controller', {
     'show-zoom-in-controller': isOnZoomButton === true
@@ -48,7 +24,13 @@ export default function ZoomController(props) {
       <CommonCloseButton onClick={closeZoomCanvas}/>
 
       <div className="zoom-in-frame">
-        <ZoomCanvas src={src} ComponentToZoomIN={ComponentToZoomIN}/>
+        <div className="zoom-canvas">
+          <img 
+            src={src}
+            width={width}
+            height={height}
+          />
+        </div>
       </div>
     </div>
   )
