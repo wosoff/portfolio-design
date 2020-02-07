@@ -19,11 +19,11 @@ export default function SidebarContent(props) {
 
   return (
     <div className="sidebar-content">
-      <div className={`content-work-wrapper ${ClassNamesBound(0)}`}>
-        <SidebarContentWork />
-      </div>
-      <div className={`content-tech-wrapper ${ClassNamesBound(1)}`}>
+      <div className={`content-tech-wrapper ${ClassNamesBound(0)}`}>
         <SidebarContentTech />
+      </div>
+      <div className={`content-work-wrapper ${ClassNamesBound(1)}`}>
+        <SidebarContentWork />
       </div>
       <div className={`content-history-wrapper ${ClassNamesBound(2)}`}>
         Content Of History

@@ -1,42 +1,42 @@
 .zoom-controller
   display: block
 
-  width: 94vw
-  height: 94vh
+  width: 90vw
+  height: 90vh
 
   position: fixed
   z-index: 5
-  top: 3vh
-  left: 3vw
+  top: 5vh
+  left: 5vw
   
-  background-color: rgba(0, 0, 0, 0.7)
-
-.zoom-controller-canvas
-  width: 100%
-  height: 100%
+  background-color: rgba(0, 0, 0, 0.7)  
 
   display: flex
-  flex-flow: column 
   justify-content: center
   align-items: center
 
+  //why redefine of margin, padding, border?
+  // If some element contains or wraps zoom-controller,
+  // and then the element has margin or padding in style,
+  // also img of image viewer has same style.
+  // e.g. <p><ImageViewer /></p>
+  // <p> margin-top: 8px => img of <ImageViewer> margin-top: 8px
+  img 
+    margin: 0
+    padding: 0
+    border: none
 
 @media only screen and (min-width: 300px) 
- .zoom-controller-canvas
-    transform: scale(0.5, 0.5)
-
-@media only screen and (min-width: 700px) 
-  .zoom-controller-canvas
-    transform: scale(0.7, 0.7)
+  .zoom-img-src
+    max-width: 85vw
+    max-height: 85vh
 
 @media only screen and (min-width: 800px) 
-  .zoom-controller-canvas
-    transform: scale(0.6, 0.6)
+  .zoom-img-src
+    max-width: 85vw
+    max-height: 85vh
 
-@media only screen and (min-width: 1000px)
-  .zoom-controller-canvas
-    transform: scale(1.5, 1.5)
-
-@media only screen and (min-width: 1300px) 
-  .zoom-controller-canvas
-    transform: scale(1, 1)
+@media only screen and (min-width: 1000px) 
+  .zoom-img-src
+    max-width: 100vw
+    max-height: 100vh

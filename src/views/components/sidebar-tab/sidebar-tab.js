@@ -10,21 +10,22 @@ export default function SidebarTab(props) {
   return (
     <div className="sidebar-tab">
       <div
-        id="tab-work"
-        onClick={() => {setIndexToSidebarTab(0)}}
-      >
-        {selectLanguage({
-          en: 'Work', ko: '오브젝트'
-        })}
-      </div>
-      <div
         id="tab-tech"
-        onClick={() => {setIndexToSidebarTab(1)}}
+        onClick={() => {setIndexToSidebarTab(0)}}
       >
         {selectLanguage({
           en: 'Tech', ko: '보유 기술'
         })}
       </div>
+      <div
+        id="tab-work"
+        onClick={() => {setIndexToSidebarTab(1)}}
+      >
+        {selectLanguage({
+          en: 'Work', ko: '오브젝트'
+        })}
+      </div>
+  
       <div
         id="tab-history"
         onClick={() => {setIndexToSidebarTab(2)}}

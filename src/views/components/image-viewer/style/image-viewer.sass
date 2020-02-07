@@ -9,7 +9,7 @@
 
 // Note that To Display custom size of image,
 // Below frame class shoud be need!
-.image-viewer-frame
+.image-viewer-thumbnail
   position: relative
 
   display: flex
@@ -35,3 +35,22 @@
   width: 100%
   height: 100%
 
+@media only screen and (min-width: 300px) 
+  .image-viewer-thumbnail
+    width: 50%
+
+@media only screen and (min-width: 600px) 
+  .image-viewer-thumbnail
+    width: 50%
+
+@media only screen and (min-width: 800px) 
+  .image-viewer-thumbnail
+    width: 40%
+
+@media only screen and (min-width: 1000px) 
+  .image-viewer-thumbnail
+    width: 75%
+
+@media only screen and (min-width: 1300px) 
+  .image-viewer-thumbnail
+    width: 80%

@@ -22,9 +22,12 @@ export default function ZoomController(props) {
         isZoomingIn &&
         <div className="zoom-controller">
           <CommonCloseButton onClick={(closeZoomCanvas)}/>
-            <div className="zoom-controller-canvas">
-              <img src={src} />
-            </div>
+        
+          <img 
+            className="zoom-img-src"
+            src={src}
+          />
+          
         </div>
       }
     </>
