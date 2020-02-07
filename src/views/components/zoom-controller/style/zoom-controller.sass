@@ -1,5 +1,5 @@
 .zoom-controller
-  display: none
+  display: block
 
   width: 94vw
   height: 94vh
@@ -11,10 +11,7 @@
   
   background-color: rgba(0, 0, 0, 0.7)
 
-.show-zoom-in-controller
-  display: block
-
-.zoom-in-frame
+.zoom-controller-canvas
   width: 100%
   height: 100%
 
@@ -23,22 +20,23 @@
   justify-content: center
   align-items: center
 
+
 @media only screen and (min-width: 300px) 
- .zoom-canvas
+ .zoom-controller-canvas
     transform: scale(0.5, 0.5)
 
 @media only screen and (min-width: 700px) 
-  .zoom-canvas
+  .zoom-controller-canvas
     transform: scale(0.7, 0.7)
 
 @media only screen and (min-width: 800px) 
-  .zoom-canvas
+  .zoom-controller-canvas
     transform: scale(0.6, 0.6)
 
 @media only screen and (min-width: 1000px)
-  .zoom-canvas
+  .zoom-controller-canvas
     transform: scale(1.5, 1.5)
 
 @media only screen and (min-width: 1300px) 
-  .zoom-canvas
+  .zoom-controller-canvas
     transform: scale(1, 1)

@@ -1,19 +1,14 @@
 .image-viewer
-  position: relative
-  // For click event Handling!
-  
   z-index: 1
   cursor: pointer
 
   display: flex
-  flex-flow: row
-  justify-content: center
+  flex-flow: column
+  justify-content: space-around
   align-items: center
 
-
-
 // Note that To Display custom size of image,
-// Below frame class should be need!
+// Below frame class shoud be need!
 .image-viewer-frame
   position: relative
 
@@ -21,12 +16,8 @@
   flex-flow: row
   justify-content: center
 
-.image-viewer-src 
-    width: 100%
-    height: 100%
-
-.image-viewer-zoom-btn
-  display: none
+.toggle-viewer-zoom-btn
+  display: block
 
   position: absolute
   z-index: 1
@@ -40,5 +31,7 @@
   
   cursor: pointer
 
-.show-image-viewer-zoom-btn
-  display: block
+.image-viewer-src 
+  width: 100%
+  height: 100%
+

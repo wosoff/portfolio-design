@@ -1,48 +1,70 @@
 import './style/image-viewer.sass'
 import React, {useState} from 'react'
-import ClassNames from 'classnames'
+import ZoomController from '../zoom-controller/zoom-controller'
+import selectLanguage from '../../helpers/selectLanguage'
 
 /**
- * @param {{ src: string; width?: number; height?: number; clickZoomButton: Function}} props
+ * @param {{ setShowingZoomBtn: any; setZoomingIn: any;}} props
  */
-export default function ImageViewer(props) {
-  const {src, width, height, clickZoomButton} = props
-
-  const defaultStyleValue = ""
-  const styleW = typeof width === 'number' 
-    ? width.toString() + 'px' 
-    : defaultStyleValue
-
-  const styleH = typeof height === 'number' 
-    ? height.toString() + 'px'
-    : defaultStyleValue
-
-
-  const [isOnZoomIn, setOnZoomIn] = useState(false)
-
-  const classNames = ClassNames('image-viewer-zoom-btn', {
-    'show-image-viewer-zoom-btn': isOnZoomIn === true
-  })
+function ToggleZoomInBtn(props) {
+  const {setShowingZoomBtn, setZoomingIn} = props
 
   return (
+    <>
+      <button
+        className="toggle-viewer-zoom-btn"
+        onMouseOut={() => {setShowingZoomBtn(false)}}
+        onClick={() => {
+          setShowingZoomBtn(false)
+          setZoomingIn(true)
+        }}
+      >
+        {
+          selectLanguage({
+            en: 'Click', ko: '자세히 보기'
+          })
+        }
+      </button>
+    </>
+  )
+}
+
+/**
+ * @param {{ src: string; style?: any; description?: string;}} props
+ */
+export default function ImageViewer(props) {
+  const {src, style, description} = props
+
+  const [isShowingZoomBtn, setShowingZoomBtn] = useState(false)
+  const [isZoomingIn, setZoomingIn] = useState(false)
+
+  return (
+    <>
     <div className="image-viewer">
       <div 
         className="image-viewer-frame"
-        style={{width: styleW, height: styleH}}
+        style={{...style}}
       >
+        {
+          isShowingZoomBtn && 
+          <ToggleZoomInBtn 
+            setShowingZoomBtn={setShowingZoomBtn} 
+            setZoomingIn={setZoomingIn}
+          />
+        }
         <img 
           className="image-viewer-src"
           src={src}
-          onMouseOver={() => {setOnZoomIn(true)}}
+          onMouseOver={() => {setShowingZoomBtn(true)}}
         />
-        <button 
-          className={classNames}
-          onMouseOut={() => {setOnZoomIn(false)}}
-          onClick={() => {clickZoomButton(true)}}
-        > 
-          Click!
-        </button>
       </div>
+      <p className="image-viewer-description">{description}</p>
     </div>
+    <ZoomController 
+      src={src}
+      isZoomingIn={isZoomingIn}
+      setZoomingIn={setZoomingIn}
+    />
+    </>
   )
 }
