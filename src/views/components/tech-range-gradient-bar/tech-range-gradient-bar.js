@@ -2,18 +2,22 @@ import './style/tech-range-gradient-bar.sass'
 import React from 'react'
 
 /**
- * @param {{title: string, deg: number, colors: string[]}} props 
+ * @param {{deg?: number, level: string}} props 
  */
-export default function TechRangeGradientBar({title, deg=0, colors}) {
-  const gradientStyleValues = colors.join(', ')
+export default function TechRangeGradientBar({level}) {
+  const gradientColorsToSkill = {
+    'middle': ['white', 'yellow'],
+    'high': ['white', 'yellow','red']
+  }
+
+  const gradientStyleValues = gradientColorsToSkill[level].join(', ')
 
   return (
     <div className="tech-range-gradient-bar">
-      <div className="tech-title">{title}</div>
       <div
-        className="tech-bar"
+        className="tech-range-bar"
         style={{
-          backgroundImage: `linear-gradient(${deg}deg, ${gradientStyleValues})`
+          backgroundImage: `linear-gradient(90deg, ${gradientStyleValues})`
         }}>
       </div>
     </div>

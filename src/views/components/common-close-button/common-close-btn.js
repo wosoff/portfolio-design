@@ -2,39 +2,19 @@ import React from 'react'
 import './style/common-close-btn.sass'
 
 /**
- * @param {{ onClick: Function, position?: {top?: string, right?: string, bottom?: string, left?: string}}} props
+ * @param {{ onClick: Function, style?: import('react').CSSProperties;}} props
  */
 export default function CommonCloseBtn(props) {
-  let topValue
-  let rightValue
-  let bottomValue
-  let leftValue
-  
-  const {onClick, position} = props
-  if (position !== undefined) {
-    const {top, right, bottom, left} = position
-    topValue = top !== undefined ? top : ''
-    rightValue = right !== undefined ? right : ''
-    bottomValue = bottom !== undefined ?  bottom : ''
-    leftValue = left !== undefined ? left : ''
-  }
+
+  const {onClick, style} = props
 
   return (
     <div
       className='common-close-button'
-      onClick={() => {
-        onClick()
-        
-      }}
-      style={{
-        top: topValue,
-        right: rightValue,
-        bottom: bottomValue,
-        left: leftValue
-      }}
+      onClick={() => {onClick()}}
     >
-      <div id="common-close-button-fragment-1"></div>
-      <div id="common-close-button-fragment-2"></div>
+      <div id="common-close-button-fragment-1" style={{...style}}></div>
+      <div id="common-close-button-fragment-2" style={{...style}}></div>
     </div>
   )
 }

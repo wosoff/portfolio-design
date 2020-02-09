@@ -30,10 +30,15 @@ function ToggleZoomInBtn(props) {
 }
 
 /**
- * @param {{ src: string; thumbnailStyle?: any; description?: string;}} props
+ * @param {{ src: string; thumbnailStyle?: import('react').CSSProperties; zoomStyle?: import('react').CSSProperties; description?: string;}} props
  */
 export default function ImageViewer(props) {
-  const {src, thumbnailStyle, description} = props
+  const {
+    src, 
+    thumbnailStyle, 
+    zoomStyle,
+    description
+  } = props
 
   const [isShowingZoomBtn, setShowingZoomBtn] = useState(false)
   const [isZoomingIn, setZoomingIn] = useState(false)
@@ -64,6 +69,7 @@ export default function ImageViewer(props) {
       src={src}
       isZoomingIn={isZoomingIn}
       setZoomingIn={setZoomingIn}
+      style={zoomStyle}
     />
     </>
   )

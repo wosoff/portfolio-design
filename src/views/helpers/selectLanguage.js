@@ -1,5 +1,5 @@
 /**
- * @param {{ch?: string, ko: string, en?: string}} param
+ * @param {{ch?: string, ko: string, en: string}} param
  * @returns {string} 
  */
 export default function selectLanguage({ch, ko, en}) {
@@ -34,5 +34,5 @@ export default function selectLanguage({ch, ko, en}) {
     return ko
   }
 
-  return ko
+  return en
 }
