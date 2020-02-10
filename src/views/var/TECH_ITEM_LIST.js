@@ -11,7 +11,7 @@
  */
 
 
-import ImageViewer from '../components/image-viewer/image-viewer'
+import ImageViewer from '../react-components/image-viewer/image-viewer'
 import selectLanguage from '../helpers/selectLanguage'
 
 const HIGH_SKILL = 'high'

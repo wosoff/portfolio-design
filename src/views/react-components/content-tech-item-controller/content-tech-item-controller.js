@@ -33,7 +33,7 @@ export default function ContentTechItemController(props) {
   return (
   <>
     <div className="content-tech-item-controller">
-      <div className="item-controller-title">{title}</div>
+      <h3 className="item-controller-title">{title}</h3>
       <div className="item-controller-level">
         <TechRangeGradientBar level={level}/>
       </div>

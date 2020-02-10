@@ -1,0 +1,57 @@
+.sidebar-content-history
+  min-height: 100vh
+
+  display: flex
+  flex-flow: column wrap
+  justify-content: space-around
+  align-items: center
+
+.content-history-thumbnail
+  width: 50%
+
+  display: flex 
+  flex-flow: column wrap
+  justify-content: center
+  align-items: center
+  p 
+    text-align: center
+
+.content-history-thumbnail-frame
+  position: relative
+  width: 100%
+  
+  img 
+    width: 100%
+    height: 100%
+
+#btn-history-thumbnail
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+
+  font-size: 1rem
+  color: rgb(255, 255, 255)
+  background-color: rgba(0, 0, 0, 0.3)
+
+  z-index: 1
+  cursor: pointer
+
+@media all and ( min-width: 800px )
+  .sidebar-content-history
+    flex-flow: row wrap
+    justify-content: space-around
+    align-items: center
+
+  .content-history-thumbnail
+    width: 30%
+
+@media all and ( min-width: 1200px )
+  .sidebar-content-history
+    flex-flow: row wrap
+    justify-content: space-around
+    align-items: center
+
+  .content-history-thumbnail
+    width: 20%

@@ -1,9 +1,9 @@
 import './style/home-main.sass'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ContactLogo from '../components/contact-logo/contact-logo'
-import Sidebar from '../components/sidebar/sidebar'
-import MainContent from '../components/main-content/main-content'
+import ContactLogo from '../react-components/contact-logo/contact-logo'
+import Sidebar from '../react-components/sidebar/sidebar'
+import MainContent from '../react-components/main-content/main-content'
 
 
 class HomeComponent extends React.Component {

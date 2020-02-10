@@ -1,7 +1,7 @@
 import './style/sidebar-content-tech.sass'
 import React from 'react'
 import ContentTechViewer from '../content-tech-viewer/content-tech-viewer'
-import {designItems, frontendItems, backendItems} from '../../var/techItemList'
+import {designItems, frontendItems, backendItems} from '../../var/TECH_ITEM_LIST'
 import selectLanguage from '../../helpers/selectLanguage'
 
 export default function SidebarContentTech() {

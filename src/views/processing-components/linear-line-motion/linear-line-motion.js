@@ -1,40 +1,29 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
-  </head>
-  <body>
-    <div id='index-root'></div>
-    <!-- <script>
-      function runLinear(processing) {
+function runLinear(processing) {
   let x1Is0 
   let x2Is1000 
   let y1;
 
   
   processing.setup = function setup() {
-      processing.createCanvas(1800, 800);
-
-      console.log(processing.canvas.classList.add('myCanvas'))
+      processing.createCanvas(1000, 600);
 
       
-      processing.strokeWeight(50)
+      processing.strokeWeight(1)
      
 
       // stroke color yellow
-      processing.stroke(200, 200, 200);
+      processing.stroke(179, 179, 179);
 
 
       x1Is0 = 0
       // 300
-      y1 = processing.height / 1;
+      y1 = processing.height / 2;
       
       x2Is1000 = processing.width
   }
 
   processing.draw = function draw() {
-      processing.background(0, 0, 0);
+      processing.background(50, 50, 50);
 
 
     
@@ -54,7 +43,7 @@
 
       processing.line(x1Is0, y1 + 800, x2Is1000, y1 + 800)
       
-      y1 = y1 - 2;
+      y1 = y1 - 0.5;
       
       if (y1 < 0) {
           y1 = processing.height;
@@ -64,8 +53,3 @@
 }
 
 let myP5 = new p5(runLinear)
-
-    </script> -->
-    <script src="public/assets/dist/indexView.bundle.js"></script>
-  </body>
-</html>

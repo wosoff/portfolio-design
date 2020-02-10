@@ -1,6 +1,6 @@
 .contact-logo
-  width: 100vw
-  height: 5vh
+  width: 50%
+  height: 20%
 
   position: relative
   
@@ -9,20 +9,21 @@
   margin-left: -100vw
   transition: margin-left 1s ease-in
 
+  display: flex
+  justify-content: start
+
   img 
-    width: 50vw
-    // Note that unit is %, not vh!
-    height: 100%
+    width: 50%
   
 .show-contact-logo
   margin-left: 0
 
-@media screen and (min-width:  700px)
+@media screen and (min-width: 700px)
   .contact-logo
-    img 
-      width: 15vw
+    width: 40%
+    height: 30%
       
 @media screen and (min-width: 1200px) 
   .contact-logo
-    img 
-      width: 15vw
+    width: 20%
+    height: 10%
