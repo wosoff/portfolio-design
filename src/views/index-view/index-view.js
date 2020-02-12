@@ -1,9 +1,10 @@
-import './style/index-main.sass'
+import './style/index-react-main.sass'
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
+import IndexHeader from '../react-components/index-header/index-header'
 import LanguageSelection from '../react-components/language-selection/language-selection'
 
-class IndexComponent extends Component {
+class IndexMain extends Component {
   render() {
     return (
       <>
@@ -14,6 +15,12 @@ class IndexComponent extends Component {
 }
 
 ReactDOM.render(
-  <IndexComponent />,
-  document.getElementById('index-root')
+  <IndexHeader />,
+  document.getElementById('react-index-header')
+)
+
+ReactDOM.render(
+  <IndexMain />,
+  document.getElementById('react-index-main')
 );
+

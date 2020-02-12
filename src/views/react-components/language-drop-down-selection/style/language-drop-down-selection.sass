@@ -1,0 +1,56 @@
+.language-drop-down-selection
+  position: absolute
+  z-index: 3
+  top: 0
+  right: 0
+
+  width: 40vw
+  height: 100%
+  
+  cursor: pointer
+  text-align: center
+
+  #dropdown-title,
+  #dropdown-en,
+  #dropdown-ko
+    display: none
+
+    width: 100%
+    height: 100%
+
+    box-sizing: border-box
+    text-align: center
+    font-size: 1.2rem
+
+    cursor: pointer
+
+  #dropdown-title
+    display: block
+    border: none
+
+.language-drop-down-selection
+  &:hover
+    #dropdown-en,
+    #dropdown-ko
+      display: block
+      
+@media all and ( min-width:  700px)
+  .language-drop-down-selection
+    width: 20vw
+
+    button
+      font-size: 2rem
+
+@media all and ( min-width:  1000px)
+  .language-drop-down-selection
+    button
+      font-size: 1.5rem
+
+@media all and ( min-width:  1200px)
+  .language-drop-down-selection
+    width: 10vw
+
+    button
+      font-size: 1.5rem
+      
+      

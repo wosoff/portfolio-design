@@ -1,25 +1,36 @@
-$btn-ransitionTimea: 0.5s
+$btn-ransitionTimea: 0.3s
+$tab-border-color: rgb(216, 213, 213)
+
 
 .sidebar-tab 
   display: flex
   flex-flow: column wrap
 
-  > div
-    height: 33.3vh
-    border-bottom: 0.1rem solid  rgb(255, 255, 255)
-    border-right: 0.1rem solid  rgb(255, 255, 255)
-    box-sizing: border-box
-
-    background-color: rgb(26, 30, 61)
-    color: rgb(150, 146, 146)
-    text-align: center
-    line-height: 33.3vh
-    cursor: pointer
-
-    transition: all $btn-ransitionTimea
-
-    z-index: 1
-
-    &:hover
-      opacity: 0.5
+.sidebar-tab-title
+  height: 33.3vh
     
+ 
+  border-bottom: 0.1rem solid $tab-border-color
+  box-sizing: border-box
+
+  background-color: rgb(255, 255, 255)
+  font-size: 1rem
+  text-align: center
+
+  line-height: 33.3vh
+  cursor: pointer
+
+  transition: all $btn-ransitionTimea
+
+  z-index: 1
+
+  &:hover
+    color: rgb(255, 0, 0)
+
+.change-sidebar-tab-color
+  background-color: $tab-border-color
+
+@media all and ( min-width: 800px ) 
+  .sidebar-tab-title
+    font-size: 1.5rem
+  

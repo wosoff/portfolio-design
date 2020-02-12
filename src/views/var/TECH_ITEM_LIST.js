@@ -8,6 +8,7 @@
  * @typedef {object} techGridType
  * @property {any} viewer
  * @property {string} src
+ * @property {string} [description]
  */
 
 
@@ -39,10 +40,16 @@ const designInfo = [
  * @type {techGridType[]}
  */
 const designGrid = [
-  {viewer: ImageViewer, src: "public/assets/images/test/large-1-2.jpg"},
-  {viewer: ImageViewer, src: "public/assets/images/test/large-1-3.jpg"},
-  {viewer: ImageViewer, src: "public/assets/images/test/large-1-4.jpg"},
-  {viewer: ImageViewer, src: "public/assets/images/test/large-1-5.jpg"}
+  {
+    viewer: ImageViewer, 
+    src: "public/assets/images/tech-photoshop-1.jpg",
+    description: selectLanguage({en: 'Double Exposure', ko: '이중노출효과'})
+  },
+  {
+    viewer: ImageViewer, 
+    src: "public/assets/images/tech-photoshop-2.jpg",
+    description: selectLanguage({en: 'Text Portrait', ko: '텍스트 인물화'})
+  },
 ]
 
 /**

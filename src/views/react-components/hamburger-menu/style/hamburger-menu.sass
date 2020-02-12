@@ -1,0 +1,117 @@
+.hamburger-menu
+  position: absolute
+  top: 0
+  left: 0
+
+  width: 100px
+  height: 100px
+
+  cursor: pointer
+
+  overflow: hidden
+
+  &:hover
+    .hamburger-menu-bar-middle
+      animation: 0
+      opacity: 0
+
+    .hamburger-menu-bar-top
+      animation: 0
+      margin-left: 0
+      transform: translate(0, 40px) rotate(45deg)
+    
+    .hamburger-menu-bar-bottom
+      animation: 0
+      margin-left: 0
+      transform: translate(0, -40px) rotate(-45deg)
+ 
+.stop-menu-flicking
+  .hamburger-menu-bar-middle
+    animation: 0
+    opacity: 0
+
+  .hamburger-menu-bar-top
+    animation: 0
+    margin-left: 0
+    transform: translate(0, 40px) rotate(45deg)
+    
+  .hamburger-menu-bar-bottom
+    animation: 0
+     margin-left: 0
+    transform: translate(0, -40px) rotate(-45deg)
+
+.hamburger-menu-bar-top,
+.hamburger-menu-bar-middle,
+.hamburger-menu-bar-bottom
+  width: 100%
+  height: 20%
+  background-color: rgb(0, 0, 0)
+
+  transition: all 1s
+
+.hamburger-menu-bar-top
+  position: absolute
+  top: 0
+  left: 0
+
+  animation: hamburger-menu-bar-top-flicking 1.5s infinite
+
+.hamburger-menu-bar-middle
+  position: absolute
+  top: 40%
+  left: 0
+
+  animation: hamburger-menu-bar-middle-flicking 1.5s infinite
+  
+.hamburger-menu-bar-bottom
+  position: absolute
+  top: 80%
+  left: 0
+
+  animation: hamburger-menu-bar-bottom-flicking 1.5s infinite
+
+
+@keyframes hamburger-menu-bar-top-flicking
+  0%
+    margin-left: -100%
+  100%
+    margin-left: 0
+
+@keyframes hamburger-menu-bar-middle-flicking
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+@keyframes hamburger-menu-bar-bottom-flicking
+  0%
+    margin-left: 100%
+  100%
+    margin-left: 0
+
+@media all and ( min-width: 800px)
+  .hamburger-menu
+    width: 50px
+    height: 50px
+    &:hover
+      .hamburger-menu-bar-top
+        transform: translate(0, 20px) rotate(45deg)
+    
+      .hamburger-menu-bar-bottom
+        transform: translate(0, -20px) rotate(-45deg)
+
+  .stop-menu-flicking
+    .hamburger-menu-bar-middle
+      animation: 0
+      opacity: 0
+
+    .hamburger-menu-bar-top
+      animation: 0
+      margin-left: 0
+      transform: translate(0, 20px) rotate(45deg)
+    
+    .hamburger-menu-bar-bottom
+      animation: 0
+      margin-left: 0
+      transform: translate(0, -20px) rotate(-45deg)

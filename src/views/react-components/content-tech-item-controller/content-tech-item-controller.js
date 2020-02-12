@@ -23,7 +23,7 @@ export default function ContentTechItemController(props) {
           onClick={() => {setShowingGrid(true)}}
         >
           {
-            selectLanguage({en: 'See Project!', ko: '기술 구현 보기'})
+            selectLanguage({en: 'See Materialization', ko: '기술 구현 보기'})
           }
         </button>
       </>

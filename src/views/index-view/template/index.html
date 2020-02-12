@@ -2,70 +2,11 @@
 <html lang="ko">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/assets/style/index-main.css">
   </head>
   <body>
-    <div id='index-root'></div>
-    <!-- <script>
-      function runLinear(processing) {
-  let x1Is0 
-  let x2Is1000 
-  let y1;
-
-  
-  processing.setup = function setup() {
-      processing.createCanvas(1800, 800);
-
-      console.log(processing.canvas.classList.add('myCanvas'))
-
-      
-      processing.strokeWeight(50)
-     
-
-      // stroke color yellow
-      processing.stroke(200, 200, 200);
-
-
-      x1Is0 = 0
-      // 300
-      y1 = processing.height / 1;
-      
-      x2Is1000 = processing.width
-  }
-
-  processing.draw = function draw() {
-      processing.background(0, 0, 0);
-
-
-    
-      processing.line(x1Is0, y1 + 100, x2Is1000, y1 + 100)
-
-      processing.line(x1Is0, y1 + 200, x2Is1000, y1 + 200)
-
-      processing.line(x1Is0, y1 + 300, x2Is1000, y1 + 300)
-
-      processing.line(x1Is0, y1 + 400, x2Is1000, y1 + 400)
-
-      processing.line(x1Is0, y1 + 500, x2Is1000, y1 + 500)
-
-      processing.line(x1Is0, y1 + 600, x2Is1000, y1 + 600)
-
-      processing.line(x1Is0, y1 + 700, x2Is1000, y1 + 700)
-
-      processing.line(x1Is0, y1 + 800, x2Is1000, y1 + 800)
-      
-      y1 = y1 - 2;
-      
-      if (y1 < 0) {
-          y1 = processing.height;
-      }
-  }
-
-}
-
-let myP5 = new p5(runLinear)
-
-    </script> -->
+    <header id="react-index-header"></header>
+    <main id="react-index-main"></main>
     <script src="public/assets/dist/indexView.bundle.js"></script>
   </body>
 </html>

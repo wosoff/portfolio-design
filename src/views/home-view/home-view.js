@@ -2,6 +2,7 @@ import './style/home-main.sass'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import ContactLogo from '../react-components/contact-logo/contact-logo'
+import LanguageDropDownSelection from '../react-components/language-drop-down-selection/language-drop-down-selection'
 import Sidebar from '../react-components/sidebar/sidebar'
 import MainContent from '../react-components/main-content/main-content'
 
@@ -33,9 +34,17 @@ class HomeComponent extends React.Component {
 
     return (
       <>
-        <div className="layout-contact-logo">
-          <ContactLogo />
-        </div>
+        <header>
+          <div className="layout-contact-logo">
+            <ContactLogo />
+          </div>
+          <div className="layout-language-drop-down">
+            <LanguageDropDownSelection 
+              isCollapsedMainPage={onCollapsedMain}
+            />
+          </div>
+        </header>
+        
         <div className="layout-sidebar">
           <Sidebar 
             onSidebar={onSidebar}

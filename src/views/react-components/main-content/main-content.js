@@ -2,7 +2,7 @@ import './style/main-content.sass'
 import React, {useRef, useEffect} from 'react'
 import ClassNames from 'classnames'
 import selectLanguage from '../../helpers/selectLanguage'
-
+import HamburgerMenu from '../hamburger-menu/hamburger-menu'
 /**
  * @param {{ onCollapsedMain: boolean; onToggleSidebarClassName: Function; }} props
  */
@@ -37,15 +37,11 @@ export default function MainContent(props) {
 
   return (
     <div className={className}>
-      <div 
-        className="main-menu-icon" 
-        ref={textAreaRef}
+      <HamburgerMenu 
+        onCollapsedMain={onCollapsedMain}
+        onRef={textAreaRef}
         onClick={openSidebarBtn}
-      >
-        <div className="menu-icon-first-bar"></div>
-        <div className="menu-icon-second-bar"></div>
-        <div className="menu-icon-third-bar"></div>
-      </div>
+      />
       <div className='content'>
         <p>
           {selectLanguage({

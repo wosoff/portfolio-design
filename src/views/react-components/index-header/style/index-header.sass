@@ -1,0 +1,78 @@
+//  animation: name duration timing-function delay iteration-count direction fill-mode
+
+$motion_horizontal_width: 100
+$motion_horizontal_height: 15
+$motion_bar_margin: 10
+
+.motion-main-title
+  position: relative
+  width: 100%
+  height: 100%
+
+.motion-title-text
+  position: absolute
+  top: 0
+  left: 0
+
+  width: 100%
+
+  padding-top: 15vh
+  text-align: center  
+  font-size: 2rem
+  font-weight: bold
+  color: rgb(255, 255, 255)
+
+  animation-name: changeTextColor
+  animation-duration: 6s
+  animation-iteration-count: infinite 
+
+.motion-title-bars-layout
+  position: relative
+  width: 100%
+  height: 100%
+
+  background-color: rgb(255, 255, 255)
+  overflow: hidden
+      
+
+.motion-title-bars
+  position: relative
+  top: 0
+  left: 0
+  
+  width: 100%
+  height: 200%
+
+  animation-name: moveBars
+  animation-duration: 6s 
+  animation-iteration-count: infinite
+
+  .m-bar
+    width: $motion_horizontal_width + vw
+    height: $motion_horizontal_height + vh
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%)
+    margin-bottom: $motion_bar_margin + vh
+
+
+@keyframes moveBars
+  0%
+    top: 0
+  100%
+    top: -100vh
+    
+@keyframes changeTextColor
+  0%
+    color: rgb(255, 255, 255)
+  100%
+    color: rgb(0, 0, 0)
+
+@media all and ( min-width: 800px )
+  .motion-title-text
+    font-size: 3rem
+    padding-top: 10vh
+
+@media all and ( min-width: 1200px )
+  .motion-title-text
+    font-size: 7rem
+    padding-top: 10vh
+  

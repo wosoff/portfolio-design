@@ -1,5 +1,6 @@
 import './style/sidebar-tab.sass'
-import React from 'react'
+import React, {useState} from 'react'
+import ClassNames from 'classnames'
 import selectLanguage from '../../helpers/selectLanguage'
 /**
  * @param {{ setIndexToSidebarTab: Function;}} props
@@ -7,19 +8,35 @@ import selectLanguage from '../../helpers/selectLanguage'
 export default function SidebarTab(props) {
   const {setIndexToSidebarTab} = props
 
+  const [indexToTab, setIndexToTab] = useState(0)
+
+  /**
+   * @param {number} index
+   */
+  const classNames = index => ClassNames('sidebar-tab-title', {
+    'change-sidebar-tab-color': index === indexToTab
+  })
+
   return (
     <div className="sidebar-tab">
       <div
-        id="tab-tech"
-        onClick={() => {setIndexToSidebarTab(0)}}
+        className={classNames(0)}
+        onClick={() => {
+          setIndexToTab(0)
+          setIndexToSidebarTab(0)
+        }}
       >
         {selectLanguage({
           en: 'Tech', ko: '보유 기술'
         })}
       </div>
+
       <div
-        id="tab-work"
-        onClick={() => {setIndexToSidebarTab(1)}}
+        className={classNames(1)}
+        onClick={() => {
+          setIndexToTab(1)
+          setIndexToSidebarTab(1)
+        }}
       >
         {selectLanguage({
           en: 'Work', ko: '오브젝트'
@@ -27,11 +44,14 @@ export default function SidebarTab(props) {
       </div>
   
       <div
-        id="tab-history"
-        onClick={() => {setIndexToSidebarTab(2)}}
+        className={classNames(2)}
+        onClick={() => {
+          setIndexToTab(2)
+          setIndexToSidebarTab(2)
+        }}
       >
         {selectLanguage({
-          en: 'History', ko: '오브젝트 생성 과정'
+          en: 'History', ko: '히스토리'
         })}
       </div>
     </div>
