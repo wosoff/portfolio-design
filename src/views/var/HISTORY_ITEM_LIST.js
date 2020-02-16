@@ -11,13 +11,15 @@ import ImageViewer from '../react-components/image-viewer/image-viewer'
  */
 const historyGrid1 = [
   {viewer: ImageViewer, src: "public/assets/images/history-portfolio-1.jpg"},
+  {viewer: ImageViewer, src: "public/assets/images/history-portfolio-1-2.jpg"}
 ]
 
 /**
  * @type {historyGridType[]}
  */
 const historyGrid2 = [
-  {viewer: ImageViewer, src: "public/assets/images/history-portfolio-2.jpg"}
+  {viewer: ImageViewer, src: "public/assets/images/history-portfolio-2.jpg"},
+  {viewer: ImageViewer, src: "public/assets/images/history-portfolio-2-2.jpg"}
 ]
 
 export const HISTORY_GRID_ITEMS = {

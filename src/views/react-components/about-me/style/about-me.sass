@@ -1,0 +1,60 @@
+.about-me
+  position: absolute
+  top: 0
+  left: 0
+
+  width: 40vw
+
+  display: flex
+  flex-flow: column
+  align-items: flex-start
+
+  cursor: pointer
+
+  animation-name: showAboutMe
+  animation-duration: 1.5s
+  animation-timing-function: ease-in-out
+
+  transition: all 0.5s
+
+  @media all and ( min-width: 800px) and (orientation: landscape)
+    width: 17vw     
+
+  @media all and ( min-width: 1200px)
+    width: 13vw
+
+  &:hover
+    .about-me-title
+      color: rgb(255, 255, 0)
+      
+    .about-me-under-bar 
+      background-color:  rgb(255, 255, 0)
+
+    @media all and ( min-width: 800px) and (orientation: landscape)
+       width: 19vw
+
+    @media all and ( min-width: 1200px) 
+       width: 15vw
+
+.about-me-title
+  align-self: flex-end
+  color: rgb(255, 255, 255)
+  font-size: 1.5rem
+  margin-left: 5%
+
+  cursor: pointer
+  border: none
+  background-color: transparent
+
+.about-me-under-bar
+  width: 100%
+  height: 0.1rem 
+  background: rgb(255, 255, 255)
+
+@keyframes showAboutMe
+  0%
+    margin-left: -100%
+  50%
+    margin-left: 20%
+  100%
+    margin-left: 0

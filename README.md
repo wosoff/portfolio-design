@@ -7,6 +7,7 @@ Instead of vw, vh, Consider using percentage such as 100%, 50% and so on.
 ---
 
 TODO
+- pdf doc adding!!!!!!!!!!!!!!!!!!
 
 - Solve button with z-index!
 

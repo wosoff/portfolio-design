@@ -1,8 +1,10 @@
 import './style/main-content.sass'
 import React, {useRef, useEffect} from 'react'
 import ClassNames from 'classnames'
-import selectLanguage from '../../helpers/selectLanguage'
 import HamburgerMenu from '../hamburger-menu/hamburger-menu'
+import AboutMe from '../about-me/about-me'
+import ContactMe from '../contact-me/contact-me'
+
 /**
  * @param {{ onCollapsedMain: boolean; onToggleSidebarClassName: Function; }} props
  */
@@ -41,15 +43,17 @@ export default function MainContent(props) {
         onCollapsedMain={onCollapsedMain}
         onRef={textAreaRef}
         onClick={openSidebarBtn}
+        outLineStyle={{marginTop: '1vw', marginLeft: '1vw'}}
+        barStyle={{backgroundColor: 'rgb(255, 255, 255)'}}
       />
-      <div className='content'>
-        <p>
-          {selectLanguage({
-            en: 'Main Content',
-            ko: '메인 콘텐츠'
-          })}
-        </p>
-      </div>
+      <ContactMe
+        isCollapsedMain={onCollapsedMain}
+        layoutStyle={{top: '50vh'}}
+      />
+      <AboutMe 
+        isCollapsedMain={onCollapsedMain}
+        layoutStyle={{top: '33vh'}}
+      />
     </div>
   )
 }

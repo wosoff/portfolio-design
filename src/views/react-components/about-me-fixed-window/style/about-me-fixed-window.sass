@@ -1,0 +1,125 @@
+.about-me-fixed-window
+  position: absolute
+  
+  width: 100%
+  height: 100%
+
+  background-color: rgba(218, 97, 97, 0.8)
+  // You've to add additional shadow to left, bottom
+  box-shadow: 0.5vw 0.5vh rgba(65, 63, 63, 0.5), 1vw 1vh rgba(65, 63, 63, 0.5)
+  
+  @media all and ( min-width: 500px ) and (orientation: landscape)
+    width: 60%
+    height: 98%
+
+    top: 1%
+    left: 20%
+
+    border-radius: 10px
+
+  @media all and ( min-width: 1200px )
+    width: 60%
+    height: 90%
+
+    top: 5%
+    left: 20%
+
+#about-me-fixed-profile,
+#about-me-fixed-description,
+#about-me-fixed-experience,
+  position: absolute
+  width: 100%
+  height: 100%
+
+  background-color: rgba(255, 255, 0, 0.5)  // test
+
+  border-radius: inherit
+
+  transform-origin: 0% 30vw
+  transition: transform 2s, opacity 2s
+
+  @media all and ( min-width: 500px ) and (orientation: landscape)
+    width: 50%
+    height: 100%
+
+    left: 50%
+
+  @media all and ( min-width: 1000px ) 
+    height: 100%
+
+.layout-about-me-content
+  position: absolute
+  top: 0
+  right: 0
+
+  width: 100%
+  height: 100%
+
+  border-radius: inherit
+  background-color: rgb(250, 240, 240)
+
+  @media all and ( min-width: 500px ) and (orientation: landscape)
+    width: 99%
+
+.layer-page-center-space   // Layering For Center Of Page For Design To CSS
+  @media screen and (min-width: 600px) and (orientation: landscape)
+    position: absolute
+    z-index: 4
+
+    top: 0
+    left: 49.5%
+  
+    width: 1% 
+    height: 100%
+
+    background-color: #b4a6a6
+
+#about-me-next-button
+  position: absolute
+  top: 0%
+  right: 15%
+
+  width: 20%
+  height: 8%
+
+  border: none
+  background: rgb(255, 255, 255)
+  border-radius: 1rem
+  
+  font-size: 1rem
+  cursor: pointer
+
+  &:hover
+    color: rgba(0, 0, 0, 1)
+    font-weight: bold
+
+  @media all and ( min-width: 500px ) and (orientation: landscape)
+    width: 8vw
+    height: 10vh
+
+    top: 35vh
+    right: -10vw
+
+    font-size: 0.8rem
+
+  @media all and ( min-width: 1000px )
+    width: 8vw
+    height: 10vh
+
+    top: 35vh
+    right: -10vw
+
+    font-size: 1rem
+
+.about-me-description-sentence
+  width: 100%
+  height: 20%
+  background-color: rgba(255, 0, 0, 0.3)
+  text-align: center
+  display: flex
+  justify-content: center
+  align-items: center
+
+.about-me-description-motion
+  width: 100%
+  height: 80%

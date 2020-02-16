@@ -1,0 +1,48 @@
+.about-me-profile-content
+  width: 100%
+  height: 100%
+
+  display: flex
+  flex-flow: column
+  justify-content: start
+  align-items: center
+  
+  @media all and ( min-width: 500px ) and (orientation: landscape)
+    font-size: 1rem
+
+.about-me-profile-content-photo
+  width: 100%
+  height: 30%
+  
+  border-radius: inherit
+  
+
+  display: flex
+  justify-content: start
+  
+  img
+    width: 55%
+
+  @media all and ( min-width: 500px ) and (orientation: landscape)
+    height: 20%
+    img 
+      width: 30%
+
+  @media all and ( min-width: 1200px )
+    height: 30%
+    img
+      width: 40%
+
+.about-me-profile-content-text
+  width: 80%
+  height: 70%
+  ul 
+    li 
+      margin: 10% auto
+      list-style: square
+  
+  @media all and ( min-width: 600px ) and (orientation: landscape)
+    height: 80%
+    ul 
+      li
+        margin: 5% auto

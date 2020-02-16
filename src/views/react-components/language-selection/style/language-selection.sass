@@ -11,7 +11,7 @@
     height: 20vw
 
     color: rgb(47, 51, 59)
-    background-color: rgb(255, 255, 255)
+    background-color: rgba(255, 255, 255, 0.8)
     
     // 40 / 3 => 13.333vw
     margin: 0 13.333vw
@@ -21,12 +21,30 @@
 
     transition: all 0.5s
 
+    animation-name: changeColorOfLanSelectionButton
+    animation-duration: 6s
+
     &:hover
       background-color: rgb(47, 51, 59)
       color: rgb(255, 255, 255)
-
+ 
   button:nth-child(1)
     margin-right: 0
+
+
+@keyframes changeColorOfLanSelectionButton
+  0%
+    opacity: 0
+    color: rgb(255, 255, 255)
+    background-color: transparent
+  10%
+    opacity: 0
+    color: rgb(255, 255, 255)
+    background-color: transparent
+  100%
+    opacity: 1
+    color: rgb(0, 0, 0)
+    background-color: rgba(255, 255, 255, 0.8)
     
 @media all and (min-width: 600px)
   .lang-selection

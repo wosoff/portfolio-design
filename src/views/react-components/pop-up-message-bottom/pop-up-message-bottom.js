@@ -1,5 +1,5 @@
 import './style/pop-up-message-bottom.sass'
-import React from 'react'
+import React, {useEffect} from 'react'
 import Classnames from 'classnames'
 import CommonCloseBtn from '../common-close-button/common-close-btn'
 
@@ -12,12 +12,22 @@ export default function PopUpMessageBottom(props) {
   // See https://reactjs.org/docs/hooks-intro.html
   const {msg, setMsg} = props
 
+  const noCopiedMsg = ''
+
+  useEffect(() => {
+    if (msg !== noCopiedMsg) {
+      setTimeout(() => {
+        setMsg('')
+      }, 2500)
+    }
+  })
+
   function closePopUpMsg() { 
-    setMsg('')
+    setMsg(noCopiedMsg)
   }
 
   const className = Classnames('pop-up-message-bottom', {
-    'show-pop-up': msg !== '' 
+    'show-pop-up': msg !== noCopiedMsg
   })
 
   return (
@@ -26,7 +36,7 @@ export default function PopUpMessageBottom(props) {
       <div className="close-pop-up-bottom">
         <CommonCloseBtn 
           onClick={closePopUpMsg}
-          position={{top: '12px', right: '10px'}}
+          fragmentStyle={{top: '12px', right: '10px', backgroundColor: 'rgb(255, 255, 255)'}}
         />
       </div>
     </div>

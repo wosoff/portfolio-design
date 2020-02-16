@@ -34,7 +34,7 @@ class HomeComponent extends React.Component {
 
     return (
       <>
-        <header>
+        <header className="layout-header">
           <div className="layout-contact-logo">
             <ContactLogo />
           </div>

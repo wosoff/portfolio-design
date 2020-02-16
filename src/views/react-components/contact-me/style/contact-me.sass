@@ -1,0 +1,72 @@
+.contact-me
+  position: absolute
+  top: 0
+  left: 0
+
+  width: 28vw
+
+  display: flex
+  flex-flow: column
+  align-items: flex-start
+  
+  transition: all 0.5s
+
+  animation-name: showContactMe
+  animation-duration: 2.7s
+  animation-timing-function: ease-in-out
+
+  @media all and ( min-width: 800px) and (orientation: landscape)
+    width: 15vw
+
+  @media all and ( min-width: 1200px)
+    width: 8vw
+
+  &:hover
+    .contact-me-title
+      color: rgb(255, 255, 0)
+      
+    .contact-me-under-bar 
+      background-color:  rgb(255, 255, 0)
+
+    @media all and ( min-width: 800px) and (orientation: landscape)
+      width: 17vw
+
+    @media all and ( min-width: 1200px)
+      width: 10vw
+
+.contact-me-title
+  align-self: flex-end
+  color: rgb(255, 255, 255)
+
+  font-size: 1.5rem
+
+  cursor: pointer
+  border: none
+  background-color: transparent
+
+.contact-me-under-bar
+  width: 100%
+  height: 0.1rem 
+  background: rgb(255, 255, 255)
+
+
+.init-contact-after-animation
+  margin-left: 0
+  
+@keyframes showContactMe
+  0% 
+    margin-left: -100%
+  40%
+    margin-left: -100%
+  70%
+    margin-left: 20%
+  100%
+    margin-left: 0
+ 
+@media all and ( min-width: 1200px)
+  .contact-me-title
+    font-size: 1.5rem
+
+  .contact-me-under-bar
+    height: 1px 
+    

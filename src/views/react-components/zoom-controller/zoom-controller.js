@@ -25,7 +25,7 @@ export default function ZoomController(props) {
           style={{...style}}
         >
           <CommonCloseButton
-            style={{backgroundColor: 'rgb(255, 255, 255)'}}
+            fragmentStyle={{backgroundColor: 'rgb(255, 255, 255)'}}
             onClick={(closeZoomCanvas)}
           />
           <img 

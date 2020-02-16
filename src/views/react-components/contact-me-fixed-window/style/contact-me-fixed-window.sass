@@ -1,0 +1,66 @@
+.contact-me-fixed-window
+  width: 90vw
+  height: 30vh
+
+  position: fixed
+  z-index: 5
+  top: 35vh
+  left: 5vw
+
+.contact-me-email,
+.contact-me-phone
+  width: 100%
+  height: 50%
+
+  display: flex
+  align-items: center
+
+  input, button
+    height: 100%
+    color: rgba(0, 0, 0, 0.5)
+    background-color: rgb(255, 255, 255)
+    border: none
+    border-bottom: 1px solid rgb(200, 200, 200)
+    box-sizing: border-box
+
+  input
+    width: 70%
+    height: 100%
+    text-align: center
+    
+  button
+    width: 30%
+    height: 100%
+    cursor: pointer
+
+    &:hover
+      font-weight: bold
+      color: rgba(0, 0, 0, 1)
+
+.contact-me-phone
+  width: 100%
+  height: 50%
+
+@media all and ( min-width: 800px ) and (orientation: landscape)
+  .contact-me-fixed-window
+    width: 35vw
+    height: 40vh
+
+    top: 30vh
+    left: (65 / 2) + vw
+
+  
+
+@media all and ( min-width: 1200px )
+  .contact-me-fixed-window
+    width: 20vw
+    height: 30vh
+
+    top: 35vh
+    left: 40vw
+
+  .contact-me-email,
+  .contact-me-phone
+    input, button
+      
+      font-size: 1.5rem

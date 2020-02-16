@@ -1,0 +1,135 @@
+.web-animation-logo
+  position: relative
+  overflow: hidden
+  width: 20vw
+  height: 20vw
+  font-size: 1rem
+  
+  @media all and ( min-width: 600px ) and (orientation: landscape)
+    width: 3.5vw
+    height: 3.5vw
+    font-size: 0.2rem
+  
+  @media all and ( min-width: 1200px)
+    font-size: 1rem
+    
+  .wal-top-left,
+  .wal-top-right,
+  .wal-bottom-left,
+  .wal-bottom-right,
+    width: 50%
+    height: 50%
+    position: absolute
+    background-color: rgb(0, 0, 0)
+
+  .wal-top-left
+    top: 0
+    left: 0%
+    animation: about_me_topLeftMove
+    animation-duration: 3s
+    animation-iteration-count: infinite
+   
+  .wal-top-right
+    top: 0
+    left: 50%
+    animation: about_me_topRightMove
+    animation-duration: 3s
+    animation-iteration-count: infinite
+
+  .wal-bottom-left
+    top: 50%
+    left: 0
+    animation: about_me_bottomLeftMove
+    animation-duration: 3s
+    animation-iteration-count: infinite
+   
+  .wal-bottom-right
+    top: 50%
+    left: 50%
+    animation: about_me_bottomRightMove
+    animation-duration: 3s
+    animation-iteration-count: infinite
+  
+  .layout-wal-title
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+    font-weight: bold
+    font-size: inherit
+
+    display: flex
+    flex-flow: column
+    justify-content: center
+    align-items: center
+
+    animation: about_me_titleColorChange
+    animation-duration: 3s
+    animation-iteration-count: infinite
+
+@keyframes about_me_topLeftMove
+  0%
+    margin-left: -100%
+  20%
+    margin-left: 0
+  100%
+    margin-left: 0
+
+@keyframes  about_me_topRightMove
+  0%
+    margin-top: -100%
+  20%
+    margin-top: -100%
+  40%
+    margin-top: 0
+  100%
+    margin-top: 0
+    
+@keyframes about_me_bottomRightMove
+  0%
+    margin-left: 50%
+  20%
+    margin-left: 50%
+  40%
+    margin-left: 50%
+  60%
+     margin-left: 0%
+  100%
+    margin-left: 0%
+
+@keyframes about_me_bottomLeftMove
+  0%
+    margin-top: 50%
+  20%
+    margin-top: 50%
+  40%
+    margin-top: 50%
+  60%
+    margin-top: 50%
+  80%
+    margin-top: 0%
+  100%
+    margin-top: 0%
+
+@keyframes about_me_titleColorChange
+  0%
+    color: rgb(0, 0, 0)
+    opacity: 0
+  20%
+    color: rgb(0, 0, 0)
+    opacity: 0
+  40%
+    color: rgb(0, 0, 0)
+    opacity: 0
+  60%
+    color: rgb(0, 0, 0)
+    opacity: 0
+  80%
+    color: rgb(0, 0, 0) 
+    opacity: 0
+  100%
+    color: rgb(255, 255, 255)
+    opacity: 1
+    
