@@ -46,6 +46,7 @@ export default function ImageViewer(props) {
   return (
     <>
     <div className="image-viewer">
+      <p className="image-viewer-description">{description}</p>
       <div 
         className="image-viewer-thumbnail"
         style={{...thumbnailStyle}}
@@ -63,7 +64,6 @@ export default function ImageViewer(props) {
           onMouseOver={() => {setShowingZoomBtn(true)}}
         />
       </div>
-      <p className="image-viewer-description">{description}</p>
     </div>
     <ZoomController 
       src={src}
