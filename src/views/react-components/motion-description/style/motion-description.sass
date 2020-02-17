@@ -3,7 +3,7 @@ $motion_break: 65%
 $motion_break_2: 45%
 $floor_fragment_height: 25%
 $animation_duration: 11s
-$animation_delay: 1.5s
+$animation_delay: 0.5s
 
 .m-d-helper-text-align
   display: flex
@@ -159,8 +159,9 @@ $animation_delay: 1.5s
   align-items: center
 
 
+  text-align: center
   font-weight: bold
-  font-size: 2rem
+  font-size: 1.5rem
   color: rgb(255, 255, 255)
 
   opacity: 0 // init for motion
@@ -170,6 +171,12 @@ $animation_delay: 1.5s
   animation-duration: $animation_duration
   animation-iteration-count: infinite
   animation-timing-function: ease-in-out
+
+  @media all and (min-width: 800px) and (orientation: landscape)
+    font-size: 1.5rem
+
+  @media all and (min-width: 1200px) and (orientation: landscape)
+    font-size: 1.5rem
 
 @keyframes motion-floor-1-stack-1
   0%

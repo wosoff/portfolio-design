@@ -1,6 +1,6 @@
 import './style/sidebar-tech-backend.sass'
 import React from 'react'
-import TechRangeGradientBar from '../tech-range-gradient-bar/tech-range-gradient-bar'
+import TechRangeGradientBar from '../../../../__temp/tech-range-gradient-bar/tech-range-gradient-bar'
 import selectLanguage from '../../helpers/selectLanguage'
 
 export default function SidebarTechBackend() {

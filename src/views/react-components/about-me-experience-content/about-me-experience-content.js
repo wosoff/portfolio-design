@@ -44,27 +44,42 @@ function ExperienceDesignImages() {
 function ExperienceWebProgrammingImages() {
   const infos = [
     {
-      title: 'HTML',
+      title: selectLanguage({
+        en: 'HTML',
+        ko: 'HTML'
+      }),
       path: IMAGE_PATH.ABOUT_ME_EXPERIENCE_FRONTEND_HTML,
       isAdvanced: true
     },
     {
-      title: 'CSS',
+      title: selectLanguage({
+        en: 'CSS',
+        ko: 'CSS'
+      }),
       path: IMAGE_PATH.ABOUT_ME_EXPERIENCE_FRONTEND_CSS,
       isAdvanced: true
     },
     {
-      title: 'JavaScript',
+      title: selectLanguage({
+        en: 'Javascript',
+        ko: '자바스크립트'
+      }),
       path: IMAGE_PATH.ABOUT_ME_EXPERIENCE_FRONTEND_JS,
       isAdvanced: true
     },
     {
-      title: 'JQuery',
+      title: selectLanguage({
+        en: 'JQuery',
+        ko: '제이쿼리'
+      }),
       path: IMAGE_PATH.ABOUT_ME_EXPERIENCE_FRONTEND_JQUERY,
       isAdvanced: true,
     },
     {
-      title: 'React',
+      title: selectLanguage({
+        en: 'React',
+        ko: '리액트'
+      }),
       path: IMAGE_PATH.ABOUT_ME_EXPERIENCE_FRONTEND_REACT,
       isAdvanced: true
     }
@@ -89,7 +104,12 @@ function ExperienceWebProgrammingImages() {
       {imgs}
       <div className="experience-content-web-programming-images">
         <WebAnimationLogo /> 
-        <div className="exp-cdi-title">Web Motion</div>
+        <div className="exp-cdi-title">
+          {selectLanguage({
+            en: 'Web Motion',
+            ko: '웹 모션'
+          })}
+        </div>
         <div className="exp-cdi-web-animation"><CommonTechRangeBar isAdvanced={true}/></div>
       </div>
     </>

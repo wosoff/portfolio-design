@@ -4,14 +4,41 @@
   display: flex
   flex-flow: column
 
-  .tech-design-layout
-    width: 100%
-    min-height: 40vh
 
-  .tech-frontend-layout
-    width: 100%
-    min-height: 40vh
+.sidebar-tech-design-layout,
+.sidebar-tech-frontend-layout,
+.sidebar-tech-backend-layout
+  width: 100%
+  padding: 2%
 
-  .tech-backend-layout
-    width: 100%
-    min-height: 20vh
+  border-bottom: 1px solid rgb(214, 209, 209)
+  box-sizing: border-box
+
+.sidebar-tech-design-layout
+  min-height: 40vh
+
+.sidebar-tech-frontend-layout
+  min-height: 40vh
+
+.sidebar-tech-backend-layout
+  min-height: 20vh
+
+
+.sidebar-content-tech-items
+  width: 100%
+
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+  align-items: center
+
+.sidebar-content-tech-title
+  display: flex
+  justify-content: start
+  align-content: center
+
+  text-align: center
+  font-weight: bold
+
+  @media all and ( min-width: 1200px )
+    font-size: 1.5rem

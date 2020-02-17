@@ -7,6 +7,13 @@
   top: 35vh
   left: 5vw
 
+  @media all and ( min-width: 600px ) and (orientation: landscape) 
+    width: 40vw
+    height: 40vh
+
+    left: 30vw
+    top: 30vh
+
 .contact-me-email,
 .contact-me-phone
   width: 100%
@@ -17,11 +24,19 @@
 
   input, button
     height: 100%
-    color: rgba(0, 0, 0, 0.5)
+    color: rgba(0, 0, 0, 0.8)
     background-color: rgb(255, 255, 255)
     border: none
     border-bottom: 1px solid rgb(200, 200, 200)
     box-sizing: border-box
+
+    font-size: 1.5rem
+
+    @media all and ( min-width: 600px ) and (orientation: landscape)
+      font-size: 1rem
+
+    @media all and ( min-width: 1200px )
+      font-size: 1rem
 
   input
     width: 70%
@@ -36,20 +51,9 @@
     &:hover
       font-weight: bold
       color: rgba(0, 0, 0, 1)
-
 .contact-me-phone
   width: 100%
   height: 50%
-
-@media all and ( min-width: 800px ) and (orientation: landscape)
-  .contact-me-fixed-window
-    width: 35vw
-    height: 40vh
-
-    top: 30vh
-    left: (65 / 2) + vw
-
-  
 
 @media all and ( min-width: 1200px )
   .contact-me-fixed-window

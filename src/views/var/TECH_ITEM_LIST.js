@@ -1,7 +1,8 @@
 /**
  * @typedef {object} techInfoType
  * @property {string} title
- * @property {string} level
+ * @property {boolean} isAdvanced
+ * @property {any[]} materializations
  */
 
 /**
@@ -15,100 +16,82 @@
 import ImageViewer from '../react-components/image-viewer/image-viewer'
 import selectLanguage from '../helpers/selectLanguage'
 
-const HIGH_SKILL = 'high'
-const MID_SKILL = 'middle'
 
 /**
  * @type {techInfoType[]}
  */
-const designInfo = [
+export const designTechItems = [
   {
     title: selectLanguage({en: 'Photoshop', ko: '포토샵'}), 
-    level: HIGH_SKILL
+    isAdvanced: true,
+    materializations: [
+      {
+        viewer: ImageViewer, 
+        src: "public/assets/images/tech-photoshop-1.jpg",
+        description: selectLanguage({en: 'Double Exposure', ko: '이중노출효과'})
+      },
+      {
+        viewer: ImageViewer, 
+        src: "public/assets/images/tech-photoshop-2.jpg",
+        description: selectLanguage({en: 'Text Portrait', ko: '텍스트 인물화'})
+      }
+    ]
   },
   {
-    title: selectLanguage({en: 'Illustrator', ko: '일러스트레이터'}), 
-    level: MID_SKILL
+    title: selectLanguage({en: 'Illustrator', ko: '일러스트레이터'}),
+    isAdvanced: false,
+    materializations: []
   },
   {
     title: selectLanguage({en: 'After Effects', ko: '애프터이펙트'}), 
-    level: MID_SKILL
+    isAdvanced: false,
+    materializations: []
   }
-]
-
-/**
- * @type {techGridType[]}
- */
-const designGrid = [
-  {
-    viewer: ImageViewer, 
-    src: "public/assets/images/tech-photoshop-1.jpg",
-    description: selectLanguage({en: 'Double Exposure', ko: '이중노출효과'})
-  },
-  {
-    viewer: ImageViewer, 
-    src: "public/assets/images/tech-photoshop-2.jpg",
-    description: selectLanguage({en: 'Text Portrait', ko: '텍스트 인물화'})
-  },
 ]
 
 /**
  * @type {techInfoType[]}
  */
-const frontendInfo = [
+export const frontendTechItems = [
   {
     title: selectLanguage({en: 'HTML', ko: 'HTML'}),
-    level: HIGH_SKILL
+    isAdvanced: true,
+    materializations: []
   },
   {
     title: selectLanguage({en: 'CSS', ko: 'CSS'}),
-    level: HIGH_SKILL
+    isAdvanced: true,
+    materializations: []
   },
   {
     title: selectLanguage({en: 'Javascript', ko: '자바스크립트'}),
-    level: HIGH_SKILL
+    isAdvanced: true,
+    materializations: []
   },
   {
     title: selectLanguage({en: 'JQuery', ko: '제이쿼리'}),
-    level: MID_SKILL
+    isAdvanced: true,
+    materializations: []
   },
   {
     title: selectLanguage({en: 'React', ko: '리액트'}),
-    level: HIGH_SKILL
+    isAdvanced: true,
+    materializations: []
   }
 ]
-
-/** @type {never[]} */
-const frontendGrid = []
 
 /**
  * @type {techInfoType[]}
  */
-const backendInfos = [
-  {
+export const backendTechItems = [
+    {
     title: selectLanguage({en: 'Node Js', ko: '노드 제이에스'}),
-    level: HIGH_SKILL
+    isAdvanced: true,
+    materializations: []
   },
   {
     title: selectLanguage({en: 'Amazon Web Service', ko: '아마존 웹 서비스'}),
-    level: MID_SKILL
+    isAdvanced: false, 
+    materializations: []
   }
 ]
-
-/** @type {never[]} */
-const backendGrid = []
-
-export const designItems = {
-  infos: designInfo,
-  grid: designGrid
-}
-
-export const frontendItems = {
-  infos: frontendInfo,
-  grid: frontendGrid
-}
-
-export const backendItems = {
-  infos: backendInfos,
-  gird: backendGrid
-}

@@ -88,7 +88,10 @@ export default function AboutMeFixedWindow(props) {
           >
             <div className="layout-about-me-content">
               <div className="about-me-description-sentence">
-                디자인은 나만의 신화입니다.
+                {selectLanguage({
+                  en: 'Design is my own myth',
+                  ko: '디자인은 나만의 신화입니다'
+                })}
               </div>
               <div className="about-me-description-motion">
                 <MotionDescription motionRun={motionRun}/>

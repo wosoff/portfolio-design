@@ -18,11 +18,6 @@ export default function AboutMe(props) {
     if (isCollapsedMain === true) {
       setIsClickedAboutMe(false)
     }
-
-    // REMOVE AFTER TEST
-    // YOU MUST BELOW CODE AFTER TEST
-    const triggerFixedWindowForTest = () => {setIsClickedAboutMe(true)}
-    triggerFixedWindowForTest()
   })
 
   return (

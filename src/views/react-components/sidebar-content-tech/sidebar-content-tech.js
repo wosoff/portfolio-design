@@ -1,32 +1,62 @@
 import './style/sidebar-content-tech.sass'
 import React from 'react'
-import ContentTechViewer from '../content-tech-viewer/content-tech-viewer'
-import {designItems, frontendItems, backendItems} from '../../var/TECH_ITEM_LIST'
+import {designTechItems, frontendTechItems, backendTechItems} from '../../var/TECH_ITEM_LIST'
 import selectLanguage from '../../helpers/selectLanguage'
+import ContentTechItemController from '../content-tech-item-controller/content-tech-item-controller'
+
+/**
+ * @param {{ en: string; ko: string; }} props
+ */
+function TechTitle(props) {
+  const {en, ko} = props
+  
+  return (
+    <div className="sidebar-content-tech-title">
+      {selectLanguage({
+        en: en, 
+        ko: ko
+      })}
+    </div>
+  )
+}
 
 export default function SidebarContentTech() {
   return (
     <div className="sidebar-content-tech">
-      <div className="tech-design-layout">
-        <ContentTechViewer
-          techKind={selectLanguage({en: 'Design', ko: '디자인'})}
-          techItemInfos={designItems.infos}
-          gridViewerItems={designItems.grid} 
+      <div className="sidebar-tech-design-layout">
+        <TechTitle 
+          en="Design"
+          ko="디자인"
         />
+        <div className="sidebar-content-tech-items">
+          <ContentTechItemController 
+            techItems={designTechItems}
+          />
+        </div>
       </div>
-      <div className="tech-frontend-layout">
-        <ContentTechViewer
-          techKind={selectLanguage({en: 'Web Programming Browser', ko: '웹 프로그래밍 브라우저'})}
-          techItemInfos={frontendItems.infos}
-          gridViewerItems={frontendItems.grid} 
+
+      <div className="sidebar-tech-frontend-layout">
+        <TechTitle 
+          en='Web Programming Browser'
+          ko='웹 프로그래밍 브라우저'
         />
+        <div className="sidebar-content-tech-items">
+          <ContentTechItemController 
+            techItems={frontendTechItems}
+          />
+        </div>
       </div>
-      <div className="tech-backend-layout">
-        <ContentTechViewer
-          techKind={selectLanguage({en: 'Web Programming Server', ko: '웹 프로그래밍 서버'})}
-          techItemInfos={backendItems.infos}
-          gridViewerItems={backendItems.gird} 
+
+      <div className="sidebar-tech-backend-layout">
+        <TechTitle 
+          en='Web Programming Server'
+          ko='웹 프로그래밍 서버'
         />
+        <div className="sidebar-content-tech-items">
+          <ContentTechItemController 
+            techItems={backendTechItems}
+          />
+        </div>
       </div>
     </div>
   )

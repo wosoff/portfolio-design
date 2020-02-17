@@ -12,11 +12,31 @@ export default function AboutMeProfile() {
       </div>
       <div className="about-me-profile-content-text">
         <ul>
-          <li>1984년 37살</li>
-          <li>세종대학교 컴퓨터공학 졸업</li>
-          <li>자동제어시스템에서 일한 경험 있습니다.</li>
-          <li>증착, 코팅업에서 일한 경험 있습니다.</li>
-          <li>웹 프로그래머 프리랜서로 일했습니다.</li>
+          <li>{selectLanguage({
+            en: `I'm 37.`, 
+            ko: '84년생 37세 입니다.'
+            })}
+          </li>
+          <li>{selectLanguage({
+            en: 'Sejong University. Computer Engineering Major.', 
+            ko: '세종대학교 컴퓨터공학 졸업하였습니다.'
+            })}
+          </li>
+          <li>{selectLanguage({
+            en: 'I has experience in automatic control system.',
+            ko: '자동제어시스템업에서 일했습니다.'
+            })}
+          </li>
+          <li>{selectLanguage({
+              en: 'I has experience in metalizing manufacturing.',
+              ko: '증착업에서 일했습니다.'
+            })}
+          </li>
+          <li>{selectLanguage({
+            en: 'I has experience in web development as free-lancer.',
+            ko: '프리랜서 웹 개발자로 일했습니다.'
+            })}
+          </li>
         </ul>
       </div>
     </div>
