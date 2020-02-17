@@ -24,7 +24,7 @@ export default function LanguageSelectionDropDown(props) {
       {
         isCollapsedMainPage === false &&
         <div className="language-drop-down-selection">
-          <button id="dropdown-title">Language 테스트</button>
+          <button id="dropdown-title">Language 언어</button>
           <button 
             id="dropdown-en"
             onClick={clickLangSelection}
