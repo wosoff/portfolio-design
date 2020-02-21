@@ -3,6 +3,13 @@ const { respondGIFImage, respondVideoMP4, respondSiteJPGImages } = require('./po
 module.exports = [
   {
     method: 'get',
+    path: '/portfolio/index',
+    middleware: [
+      respondGIFImage,
+    ],
+  },
+  {
+    method: 'get',
     path: '/portfolio/banner/:name',
     middleware: [
       respondGIFImage,

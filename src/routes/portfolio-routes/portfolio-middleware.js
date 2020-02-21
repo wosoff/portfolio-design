@@ -1,12 +1,20 @@
 const path = require('path')
 
+exports.respondStandAloneHTML = /**
+* @param {import('express').Request} req
+* @param {import('express').Response} res
+*/
+function respondStandAloneHTML(req, res) {
+  console.log(req.url)
+}
+
 exports.respondSiteJPGImages = /**
  * @param {import('express').Request} req
  * @param {import('express').Response} res
  */
  function respondSiteJPGImages(req, res) {
   const options = {
-    root: path.join('public', 'assets', 'images', 'portfolio', 'site'),
+    root: path.join('public', 'portfolio', 'site'),
     dotfiles: 'deny',
     headers: {
       'x-timestamp': Date.now(),
@@ -31,7 +39,7 @@ exports.respondGIFImage = /**
 */
 function respondGIFImage(req, res) {
   const options = {
-    root: path.join('public', 'assets', 'images', 'portfolio', 'banner'),
+    root: path.join('public', 'portfolio', 'banner'),
     dotfiles: 'deny',
     headers: {
       'x-timestamp': Date.now(),
@@ -56,7 +64,7 @@ exports.respondVideoMP4 = /**
 */
 function respondVideoMP4(req, res) {
   const options = {
-    root: path.join('public', 'assets', 'videos'),
+    root: path.join('public', 'portfolio', 'videos'),
     dotfiles: 'deny',
     headers: {
       'x-timestamp': Date.now(),
