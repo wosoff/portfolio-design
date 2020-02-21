@@ -1,11 +1,19 @@
+const fs = require('fs')
 const path = require('path')
 
 exports.respondStandAloneHTML = /**
 * @param {import('express').Request} req
 * @param {import('express').Response} res
 */
-function respondStandAloneHTML(req, res) {
-  console.log(req.url)
+function (req, res) {
+  fs.readFile(path.join('public', 'portfolio', 'stand-alone-html', 'index.html'), (err, data) => {
+    if (err) {
+      console.log(err)
+    }
+
+    res.write(data);
+    res.end();
+  })
 }
 
 exports.respondSiteJPGImages = /**
