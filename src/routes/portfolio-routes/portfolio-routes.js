@@ -24,7 +24,7 @@ module.exports = [
   },
   {
     method: 'get',
-    path: '/portfolio/video/:name',
+    path: '/portfolio/videos/:name',
     middleware: [
       respondVideoMP4,
     ],
