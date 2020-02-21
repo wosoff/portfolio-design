@@ -3,7 +3,7 @@ const util = require('util');
 const path = require('path')
 // const { TEMPLATE } = require('../../var/PATH');
 
-exports.respondIndexPost = function respondIndexPost(req, res) {
+exports.respondGIFImage = function respondGIFImage(req, res) {
   const options = {
     root: path.join('public', 'assets', 'images', 'portfolio'),
     dotfiles: 'deny',
@@ -14,15 +14,34 @@ exports.respondIndexPost = function respondIndexPost(req, res) {
   }
 
   const fileName = req.params.name
-  console.log(fileName)
 
   res.sendFile(`${fileName}.gif`, options, (err) => {
     if (err) {
       console.log(err)
-      res.sendStatus(404)
       return
     }
-
     console.log('Sent:', fileName)
   })
 };
+
+exports.respondVideoMP4 = function respondVideoMP4(req, res) {
+  const options = {
+    root: path.join('public', 'assets', 'videos'),
+    dotfiles: 'deny',
+    headers: {
+      'x-timestamp': Date.now(),
+      'x-sent': true
+    }
+  }
+
+  const fileName = req.params.name
+
+  res.sendFile(`${fileName}.mp4`, options, (err) => {
+    if (err) {
+      console.log(err)
+      return
+    }
+    console.log('Sent:', fileName)
+  })
+};
+

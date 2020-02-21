@@ -1,11 +1,18 @@
-const { respondIndexPost } = require('./portfolio-middleware');
+const { respondGIFImage, respondVideoMP4 } = require('./portfolio-middleware');
 
 module.exports = [
   {
     method: 'get',
     path: '/portfolio/banner/:name',
     middleware: [
-      respondIndexPost,
+      respondGIFImage,
+    ],
+  },
+  {
+    method: 'get',
+    path: '/portfolio/video/:name',
+    middleware: [
+      respondVideoMP4,
     ],
   },
 ];
